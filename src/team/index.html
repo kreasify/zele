@@ -296,7 +296,7 @@
 
   <section>
     <div
-      class="min-h-screen relative bg-cover bg-to bg-[url('./../assets/images/hero_team.jpg')] flex items-center justify-center">
+      class="min-h-screen relative bg-cover bg-[url('./../assets/images/hero_team.jpg')] flex items-center justify-center">
       <div>
         <h1 class="text-white text-8xl font-bold font-['Hurricane'] -rotate-12 underline mb-40">Our Team</h1>
       </div>
@@ -743,42 +743,42 @@
         }
       }, 3000);
     }
-}' class="bg-gray-100">
-    <div class="container max-w-screen-xl mx-auto py-10 px-4 md:px-8">
+}'>
+    <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
       <header class="mb-16">
         <div>
-          <h3 class="text-orange-500 text-8xl font-bold font-['Hurricane']">Our clients’</h3>
+          <h3 class="text-orange-500 text-6xl font-bold font-['Hurricane']">Our clients’</h3>
           <h2 class="text-6xl font-[anton]">TESTIMONIALS</h2>
         </div>
       </header>
-      <div class="max-w-3xl mx-auto py-8">
-        <div class="flex justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="24" viewBox="0 0 33 24" fill="none">
-            <path
-              d="M20.242 14.9893C20.242 10.6619 21.2811 7.27402 23.3594 4.82562C25.4662 2.37722 28.4128 0.768683 32.1993 0V4.44128C29.3238 5.32384 27.3879 6.91815 26.3915 9.2242C25.8221 10.4484 25.5943 11.6299 25.7082 12.7687H32.4128V24H20.242V14.9893ZM0 14.9893C0 10.7189 1.01068 7.3452 3.03203 4.86833C5.08185 2.39146 8.05694 0.768683 11.9573 0V4.44128C9.05338 5.35231 7.1032 6.91815 6.10676 9.13879C5.59431 10.3061 5.38078 11.516 5.46619 12.7687H12.1708V24H0V14.9893Z"
-              fill="#00A82D" />
-          </svg>
+      <div class="flex items-center">
+        <div class="flex-1 lg:grid lg:grid-cols-4 bg-blue-100">
+          <div class="lg:col-span-1">
+            <img :src="`./../assets/images/${reviews[point].image}`" :alt="reviews[point].name">
+          </div>
+          <div class="lg:col-span-3 pr-6 lg:pr-16">
+            <div class="py-8 bg-no-repeat bg-right bg-[url('./../assets/images/quote_sign_gray.png')]">
+              <blockquote class="text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text">
+              </blockquote>
+              <blockquote class="font-medium" x-text="reviews[point].name"></blockquote>
+              <p x-text="reviews[point].position"></p>
+            </div>
+          </div>
         </div>
-        <div class="text-center text-black text-xl lg:text-2xl pt-6 mb-8">
-          <blockquote class="before:content-['\201C'] after:content-['\201D'] mb-6" x-text="reviews[point].text">
-          </blockquote>
-          <blockquote class="font-medium" x-text="reviews[point].name"></blockquote>
+        <div class="flex-none w-1 h-full bg-black">
+          <ul class="cursor-pointer">
+            <template x-for="review in reviews" :key="review.id">
+              <li x-on:click="point = review.id">
+                <div class="w-1 h-16 bg-orange-600"
+                  :class="review.id == point ? 'opacity-100' : 'opacity-30 hover:opacity-100'"></div>
+              </li>
+            </template>
+          </ul>
         </div>
-      </div>
-      <div class="max-w-5xl mx-auto mb-4">
-        <ul class="flex items-center justify-center space-x-3 lg:space-x-12 cursor-pointer">
-          <template x-for="review in reviews" :key="review.id">
-            <li x-on:click="point = review.id">
-              <img class="hidden lg:block" :src="`./../assets/images/${review.image}`" :alt="review.name"
-                :class="review.id == point ? 'opacity-100' : 'opacity-30 hover:opacity-100'">
-              <div class="w-3 h-3 bg-black rounded-full lg:hidden"
-                :class="review.id == point ? 'opacity-100' : 'opacity-30 hover:opacity-100'"></div>
-            </li>
-          </template>
-        </ul>
       </div>
     </div>
   </section>
+
 
 
 
