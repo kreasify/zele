@@ -15,14 +15,20 @@
 </head>
 
 <body x-data="{sideNav: false, atTop: true}" :class="{ 'overflow-hidden': sideNav }">
-  <header class="header relative">
-    <div class="fixed w-full left-0 top-0 z-20 transition-all duration-500 ease-[ease] delay-300"
-      :class="{ 'shadow-lg': !atTop }" x-on:scroll.window="atTop = (window.pageYOffset > 80) ? false : true;">
-      <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-0">
+  <header class="header">
+    <div class="w-full left-0 top-0 transition-all duration-500 ease-[ease] delay-300"
+      :class="{ 'absolute': atTop, 'fixed bg-white delay-300 animate-[fadeInDown_900ms_ease-in-out] shadow-lg z-50': !atTop }"
+      x-on:scroll.window="atTop = (window.pageYOffset > 80) ? false : true;">
+      <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-0 relative z-10">
         <div class="nav__wrapper grid grid-cols-12 items-center">
           <div class="nav__brand col-span-11 lg:col-span-3 xl:col-span-2">
             <a class="navbar__logo" href="/" title="Back to home">
-              <img class="object-cover" src="./../assets/images/logo.png" width="135" height="90" alt="logo">
+              <!-- white logo -->
+              <img class="max-w-full" :class="atTop ? 'block' : 'hidden'"
+                src="./../assets/images/logo.png" width="135" height="90" alt="logo">
+              <!-- black logo -->
+              <img class="max-w-full" :class="atTop ? 'hidden' : 'block'"
+                src="./../assets/images/logo_black.png" width="116" height="55" alt="logo">
             </a>
           </div>
           <div class="nav__toggle col-span-1 h-8 flex items-center justify-end lg:hidden">
@@ -201,7 +207,8 @@
                 <!-- change menu lists data in src>data>menus.json -->
                 <template x-for="(menu, index) in menus" :key="menu.id">
                   <li @click="selectedMenu !== index ? selectedMenu = index : selectedMenu = null"
-                    class="menu__item relative group text-white hover:text-orange-600 uppercase transition duration-300 ease-[ease] after:absolute after:content-[''] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:left-0 after:bottom-0 lg:after:h-[2px] after:bg-orange-600 after:transition after:duration-300 after:ease-[ease] cursor-pointer">
+                    class="menu__item relative group hover:text-orange-600 uppercase transition duration-300 ease-[ease] after:absolute after:content-[''] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:left-0 after:bottom-0 lg:after:h-[2px] after:bg-orange-600 after:transition after:duration-300 after:ease-[ease] cursor-pointer"
+                    :class="atTop ? 'text-white' : 'text-gray-700'">
 
                     <template x-if="!menu.submenu">
                       <a class="menu__item-link block text-xs lg:text-sm text-current uppercase text-center lg:text-left py-3 lg:py-6"
@@ -211,7 +218,7 @@
                     <template x-if="menu.submenu">
                       <div>
                         <button
-                          class="w-full flex items-center justify-between lg:justify-start text-current cursor-pointer focus:outline-none">
+                          class="w-full flex items-center justify-between lg:justify-start cursor-pointer focus:outline-none">
                           <span
                             class="menu__link flex-1 text-xs lg:text-sm text-current uppercase text-center lg:text-left py-3 lg:py-6"
                             x-text="menu.label"></span>
