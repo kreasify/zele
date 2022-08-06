@@ -24,11 +24,11 @@
           <div class="nav__brand col-span-11 lg:col-span-3 xl:col-span-2">
             <a class="navbar__logo" href="/" title="Back to home">
               <!-- white logo -->
-              <img class="max-w-full" :class="atTop ? 'block' : 'hidden'"
-                src="./../assets/images/logo.png" width="135" height="90" alt="logo">
+              <img class="max-w-full" :class="atTop ? 'block' : 'hidden'" src="./../assets/images/logo.png" width="135"
+                height="90" alt="logo">
               <!-- black logo -->
-              <img class="max-w-full" :class="atTop ? 'hidden' : 'block'"
-                src="./../assets/images/logo_black.png" width="116" height="55" alt="logo">
+              <img class="max-w-full" :class="atTop ? 'hidden' : 'block'" src="./../assets/images/logo_black.png"
+                width="116" height="55" alt="logo">
             </a>
           </div>
           <div class="nav__toggle col-span-1 h-8 flex items-center justify-end lg:hidden">
@@ -303,9 +303,9 @@
 
   <section>
     <div
-      class="min-h-screen relative bg-cover bg-[url('./../assets/images/hero_team.jpg')] flex items-center justify-center">
+      class="aspect-square lg:aspect-[21/9] relative bg-cover bg-center bg-no-repeat bg-[url('./../assets/images/hero_team.jpg')] flex items-center justify-center">
       <div>
-        <h1 class="text-white text-8xl font-bold font-['Hurricane'] -rotate-12 underline mb-40">Our Team</h1>
+        <h1 class="text-white text-6xl lg:text-8xl font-bold font-['Hurricane'] -rotate-12 underline mb-20 lg:mb-40">Our Team</h1>
       </div>
       <div
         class="absolute left-0 bottom-0 w-full bg-contain bg-bottom bg-no-repeat aspect-[21/3] bg-[url('./../images/white_bottom_wave_01.png')]">
@@ -517,10 +517,10 @@
 
   <section>
     <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
-      <header class="flex items-end justify-between mb-16">
-        <div>
-          <h3 class="text-orange-500 text-8xl font-bold font-['Hurricane']">Devoted</h3>
-          <h2 class="text-6xl font-[anton]">FITNESS COACHES</h2>
+      <header class="lg:flex lg:items-end lg:justify-between mb-16">
+        <div class="mb-10 lg:mb-0">
+          <h3 class="text-orange-500 text-7xl lg:text-8xl font-bold font-['Hurricane']">Devoted</h3>
+          <h2 class="text-5xl lg:text-6xl font-[anton]">FITNESS COACHES</h2>
         </div>
         <div>
           <a class="text-gray-700 font-bold inline-flex items-center py-3 pl-4 pr-8 overflow-hidden group relative before:absolute before:content-[''] before:-left-4 before:top-0 before:w-14 hover:before:w-full before:h-full before:skew-x-[-20deg] before:bg-orange-500 before:transition-all before:duration-300 before:ease-[ease]"
@@ -543,7 +543,7 @@
             <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
               src="./../assets/images/team_04.jpg" alt="">
           </div>
-          <div class="absolute left-0 bottom-10 w-full px-6 overflow-hidden">
+          <div class="absolute left-0 bottom-6 lg:bottom-10 w-full px-6 overflow-hidden">
             <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
               <header class="border-b border-solid border-white pb-4 mb-4">
                 <h4 class="text-4xl text-white font-[anton] mb-3">NICOLAS THOMSON</h4>
@@ -607,7 +607,7 @@
             <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
               src="./../assets/images/team_05.jpg" alt="">
           </div>
-          <div class="absolute left-0 bottom-10 w-full px-6 overflow-hidden">
+          <div class="absolute left-0 bottom-6 lg:bottom-10 w-full px-6 overflow-hidden">
             <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
               <header class="border-b border-solid border-white pb-4 mb-4">
                 <h4 class="text-4xl text-white font-[anton] mb-3">CHRISTOPHER RONAN</h4>
@@ -671,7 +671,7 @@
             <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
               src="./../assets/images/team_06.jpg" alt="">
           </div>
-          <div class="absolute left-0 bottom-10 w-full px-6 overflow-hidden">
+          <div class="absolute left-0 bottom-6 lg:bottom-10 w-full px-6 overflow-hidden">
             <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
               <header class="border-b border-solid border-white pb-4 mb-4">
                 <h4 class="text-4xl text-white font-[anton] mb-3">SAMANTHA PAUL - SMITH</h4>
@@ -755,16 +755,16 @@
       <header class="mb-16">
         <div>
           <h3 class="text-orange-500 text-6xl font-bold font-['Hurricane']">Our clients’</h3>
-          <h2 class="text-6xl font-[anton]">TESTIMONIALS</h2>
+          <h2 class="text-5xl lg:text-6xl font-[anton]">TESTIMONIALS</h2>
         </div>
       </header>
       <div class="flex items-center">
         <div class="flex-1 lg:grid lg:grid-cols-4">
-          <div class="lg:col-span-1">
+          <div class="lg:col-span-1 mb-8 lg:mb-0">
             <img :src="`./../assets/images/${reviews[point].image}`" :alt="reviews[point].name">
           </div>
           <div class="lg:col-span-3 pr-6 lg:pr-16">
-            <div class="py-8 bg-no-repeat bg-right-top bg-[url('./../assets/images/quote_sign_gray.png')]">
+            <div class="py-8 bg-no-repeat bg-right-top lg:bg-[url('./../assets/images/quote_sign_gray.png')]">
               <div class="flex items-center space-x-2 mb-6">
                 <span class="text-orange-600">
                   <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
@@ -802,13 +802,13 @@
                   </svg>
                 </span>
               </div>
-              <blockquote class="text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text">
+              <blockquote class="text-3xl lg:text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text">
               </blockquote>
               <div class="mb-2">
                 <img src="./../assets/images/signature_04.png" alt="">
               </div>
               <div>
-                <p class="font-medium" x-text="reviews[point].name"></p>
+                <p class="text-lg font-medium" x-text="reviews[point].name"></p>
                 <p class="text-sm text-gray-500" x-text="reviews[point].position"></p>
               </div>
             </div>
@@ -818,7 +818,7 @@
           <ul class="cursor-pointer">
             <template x-for="review in reviews" :key="review.id">
               <li x-on:click="point = review.id">
-                <div class="w-1 h-16 bg-orange-600"
+                <div class="w-1 h-24 bg-orange-600"
                   :class="review.id == point ? 'opacity-100' : 'opacity-30 hover:opacity-100'"></div>
               </li>
             </template>
@@ -835,7 +835,7 @@
     <div class="bg-[#171c34]">
       <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
         <div class="lg:grid lg:grid-cols-3">
-          <div class="lg:col-span-1">
+          <div class="lg:col-span-1 mb-8">
             <div class="mb-8">
               <img src="./../assets/images/logo_footer.png" width="165" height="65" alt="">
             </div>
@@ -847,7 +847,7 @@
             </div>
           </div>
           <div class="lg:col-span-2 lg:grid lg:grid-cols-4 lg:gap-x-4">
-            <div>
+            <div class="mb-8">
               <header class="mb-4">
                 <h4 class="text-orange-500">QUICKS LINKS</h4>
               </header>
@@ -861,7 +861,7 @@
                 </ul>
               </div>
             </div>
-            <div>
+            <div class="mb-8">
               <header class="mb-4">
                 <h4 class="text-orange-500">LOCATION & HOURS</h4>
               </header>
@@ -874,27 +874,31 @@
                 </div>
               </div>
             </div>
-            <div class="lg:col-span-2">
+            <div class="lg:col-span-2 mb-8">
               <header class="mb-8">
                 <h4 class="text-orange-500">NEWSLETTER</h4>
               </header>
-              <div class="flex items-center space-x-4 border-b border-solid border-gray-400 pb-2">
-                <input type="email" name="your-email" value="" size="40"
-                  class="w-full text-gray-100 focus:outline-none placeholder-gray-200 bg-transparent"
-                  aria-required="true" aria-invalid="false" placeholder="Your E-mail*">
-                <button id="submit" class="flex items-center space-x-4 text-orange-500 group">
-                  <span>SUBSCRIBE</span>
-                  <span class="relative">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                      class="w-4 h-auto fill-current -rotate-45 group-hover:rotate-0 transition-all duration-300 ease-[ease]">
-                      <path
-                        d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
-                      </path>
-                    </svg>
-                  </span>
-                </button>
+              <div class="lg:flex lg:items-center">
+                <div class="border-b border-solid border-gray-400 pb-2 mb-6">
+                  <input type="email" name="your-email" value="" size="40"
+                    class="w-full text-gray-100 focus:outline-none placeholder-gray-200 bg-transparent"
+                    aria-required="true" aria-invalid="false" placeholder="Your E-mail*">
+                </div>
+                <div class="border-b border-solid border-gray-400 pb-2 mb-8">
+                  <button id="submit" class="flex items-center space-x-4 text-orange-500 group">
+                    <span>SUBSCRIBE</span>
+                    <span class="relative">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        class="w-4 h-auto fill-current -rotate-45 group-hover:rotate-0 transition-all duration-300 ease-[ease]">
+                        <path
+                          d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
+                        </path>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
               </div>
-              <div class="social__link pt-8">
+              <div class="social__link">
                 <ul class="flex items-center space-x-4">
                   <li>
                     <a class="text-gray-100 hover:text-orange-500" href="https://www.facebook.com/evernote/">
