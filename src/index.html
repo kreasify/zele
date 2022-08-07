@@ -14,6 +14,49 @@
     rel="stylesheet">
 
   <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fadeInUp {
+      animation: fadeInUp 1s;
+    }
+
+    @keyframes scale {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .scale {
+      animation: scale 1s;
+    }
+
+    @media (prefers-reduced-motion) {
+
+      .fadeInUp,
+      .scale {
+        animation: none;
+      }
+    }
+  </style>
 
 </head>
 
@@ -303,6 +346,100 @@
     </div>
   </header>
 
+  <section x-data='{
+    reviews: [
+      { "id": 0, "title": "Skill", "subtitle": "Endurance", "headline": "DISCIPLINE", "url": "start-today", "name": "ROBERTA FLANNAGAN", "position": "Personal workout", "image": "hero_slider_03_01.jpg", "width": "110", "text": "A mountain of excuses, or a mountain of motivation. Every mountain conquered start with one step, tall the mountain, it cannot block the sun." },
+      { "id": 1, "title": "Polar", "subtitle": "Now To Use", "headline": "STRENGTH", "url": "start-today", "name": "SYLVIA RINSKY", "position": "Recreational climber", "image": "hero_slider_03_02.jpg", "width": "90", "text": "The choices we make lead up to experiences make actual. It is one thing to decide to climb a mountain. It is quite another to be on top of it." },
+      { "id": 2, "title": "Club", "subtitle": "The Ultimate", "headline": "TRAINING", "url": "start-today", "name": "ROBERT MULLINGAN", "position": "Recreational climber", "image": "hero_slider_03_03.jpg", "width": "150", "text": "A mountain of excuses, or a mountain of motivation. Every mountain conquered start with one step, tall the mountain, it cannot block the sun." }
+    ],
+    point: 0,
+    init() {
+      setInterval(() => {
+        if(this.point < this.reviews.length - 1){
+          this.point ++;
+        }else{
+          this.point = 0;
+        }
+      }, 3000);
+    }
+}'>
+    <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
+      <header class="mb-16">
+        <div>
+          <h3 class="text-[#f41e1e] text-6xl font-bold font-['Hurricane']">Our clients’</h3>
+          <h2 class="text-5xl lg:text-6xl font-[anton]">TESTIMONIALS</h2>
+        </div>
+      </header>
+      <div class="flex items-center">
+        <div class="flex-1 lg:grid lg:grid-cols-4">
+          <div class="lg:col-span-1 mb-8 lg:mb-0">
+            <img :src="`/assets/images/${reviews[point].image}`" :alt="reviews[point].name">
+          </div>
+          <div class="lg:col-span-3 pr-6 lg:pr-16">
+            <div class="py-8 bg-no-repeat bg-right-top lg:bg-[url('/assets/images/quote_sign_gray.png')]">
+              <div class="flex items-center space-x-2 mb-6">
+                <span class="text-[#f41e1e]">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path
+                      d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
+                  </svg>
+                </span>
+                <span class="text-[#f41e1e]">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path
+                      d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
+                  </svg>
+                </span>
+                <span class="text-[#f41e1e]">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path
+                      d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
+                  </svg>
+                </span>
+                <span class="text-[#f41e1e]">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path
+                      d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
+                  </svg>
+                </span>
+                <span class="text-[#f41e1e]">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path
+                      d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
+                  </svg>
+                </span>
+              </div>
+              <blockquote class="text-3xl lg:text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text">
+              </blockquote>
+              <div class="mb-2">
+                <img src="/assets/images/signature_04.png" alt="">
+              </div>
+              <div>
+                <p class="text-lg font-medium" x-text="reviews[point].name"></p>
+                <p class="text-sm text-gray-500" x-text="reviews[point].position"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-none w-1 h-full bg-black">
+          <ul class="cursor-pointer">
+            <template x-for="review in reviews" :key="review.id">
+              <li x-on:click="point = review.id">
+                <div class="w-1 h-24 bg-[#f41e1e]"
+                  :class="review.id == point ? 'opacity-100' : 'opacity-30 hover:opacity-100'"></div>
+              </li>
+            </template>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div
       class="aspect-square lg:aspect-[21/9] relative bg-cover bg-center bg-no-repeat bg-[url('/assets/images/hero_team.jpg')] flex items-center justify-center">
@@ -318,7 +455,7 @@
 
   <section class="bg-fixed bg-cover bg-left bg-no-repeat bg-[url('/assets/images/background_03_01.jpg')]">
     <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
-      <header class="lg:flex lg:justify-between lg:items-center">
+      <header class="lg:flex lg:justify-between lg:items-center" x-intersect="$el.classList.add('fadeInUp')">
         <div class="mb-10 lg:mb-0">
           <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']">Build your</h3>
           <h2 class="text-6xl lg:text-7xl font-[anton]">BEST BODY</h2>
@@ -340,7 +477,7 @@
       </header>
       <div class="lg:grid lg:grid-cols-3 lg:gap-x-6">
         <div class="grid__item pt-32">
-          <div class="relative group mb-8">
+          <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
             <div class="overflow-hidden">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
                 src="/assets/images/card_image_07.jpg" alt="">
@@ -363,7 +500,7 @@
               </div>
             </div>
           </div>
-          <div class="relative group mb-8">
+          <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
             <div class="overflow-hidden">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
                 src="/assets/images/card_image_10.jpg" alt="">
@@ -1336,8 +1473,75 @@
               tabindex="0">
             </iframe>
           </div>
-          <div class="absolute top-1/4 left-1/2 w-1/5">
-
+          <div class="absolute top-[15%] left-1/2 w-1/5 bg-white">
+            <div class="text-black pt-16 pl-12 pr-8 mb-8">
+              <div class="mb-2">
+                <span class="text-sm text-white font-medium bg-[#f41e1e] px-1 pb-[2px]">ADDRESS</span>
+              </div>
+              <h4 class="text-2xl font-[anton] leading-relaxed">244 STOCKWELL RD<br>
+                4TH FLOOR<br>
+                BRIXTON, SW9 9SP</h4>
+            </div>
+            <div class="text-black pl-12 pr-8 mb-8">
+              <div class="mb-2">
+                <span class="text-sm text-white font-medium bg-[#f41e1e] px-1 pb-[2px]">WORKING HOURS</span>
+              </div>
+              <h4 class="text-2xl font-[anton] leading-relaxed">MON - SAT<br>
+                6:00 - 23:00<br>
+                SUNDAY - CLOSED</h4>
+            </div>
+            <div class="text-black pl-12 pr-8 mb-4">
+              <div class="mb-2">
+                <span class="text-sm text-white font-medium bg-[#f41e1e] px-1 pb-[2px]">CONTACT INFO</span>
+              </div>
+              <h4 class="text-2xl font-[anton] leading-relaxed">099 40 70 929<br>
+                info@zelefitness.com</h4>
+            </div>
+            <div class="social__link pl-12 mb-8">
+              <ul class="flex items-center space-x-4">
+                <li>
+                  <a class="text-black hover:text-[#f41e1e]" href="https://www.facebook.com/evernote/">
+                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                      <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                      </path>
+                    </svg>
+                    <!-- Facebook -->
+                  </a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-[#f41e1e]" href="https://twitter.com/evernote">
+                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <path
+                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                      </path>
+                    </svg>
+                    <!-- Twitter -->
+                  </a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-[#f41e1e]" href="https://www.instagram.com/evernote">
+                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                      </path>
+                    </svg>
+                    <!-- Instagram -->
+                  </a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-[#f41e1e]"
+                    href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
+                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path
+                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                      </path>
+                    </svg>
+                    <!-- YouTube -->
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
