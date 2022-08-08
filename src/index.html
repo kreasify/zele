@@ -33,6 +33,38 @@
       animation: fadeInUp 1s;
     }
 
+    @keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .fadeInLeft {
+      animation: fadeInLeft 1s;
+    }
+
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .fadeInRight {
+      animation: fadeInRight 1s;
+    }
+
     @keyframes scale {
       0% {
         opacity: 0;
@@ -590,7 +622,8 @@
     <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
       <header class="lg:flex lg:justify-between lg:items-center">
         <div class="mb-10 lg:mb-0">
-          <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Build your</h3>
+          <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']"
+            x-intersect="$el.classList.add('fadeInUp')">Build your</h3>
           <h2 class="text-6xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">BEST BODY</h2>
         </div>
         <div x-intersect="$el.classList.add('fadeInUp')">
@@ -760,7 +793,8 @@
   <section class="bg-fixed bg-cover bg-right bg-no-repeat bg-[url('/assets/images/background_03_02.jpg')]">
     <div class="container w-full max-w-screen-xl mx-auto pt-8 pb-16 lg:pb-24 px-6 lg:px-0">
       <header class="text-center py-20 mb-4 bg-contain bg-top bg-no-repeat bg-[url('/assets/images/sign_gray.png')]">
-        <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">How you can</h3>
+        <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']"
+          x-intersect="$el.classList.add('fadeInUp')">How you can</h3>
         <h2 class="text-6xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">#BECOMESTRONGER</h2>
       </header>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-12">
@@ -895,7 +929,8 @@
         <div class="lg:grid lg:grid-cols-3 lg:items-center lg:gap-x-10">
           <div class="relative mb-8 lg:mb-0">
             <div>
-              <img class="max-w-full" src="/assets/images/hero_image_05.png" alt="" x-intersect="$el.classList.add('scale')">
+              <img class="max-w-full" src="/assets/images/hero_image_05.png" alt=""
+                x-intersect="$el.classList.add('scale')">
             </div>
             <div class="absolute left-0 bottom-0 z-10">
               <img class="max-w-full" src="/assets/images/floating_image_05.png" alt="">
@@ -904,8 +939,10 @@
           <div class="lg:col-span-2">
             <div class="lg:grid lg:grid-cols-3 lg:items-center">
               <header class="lg:col-span-2">
-                <h3 class="text-white text-6xl lg:text-7xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Your first</h3>
-                <h2 class="text-6xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">CLASS FREE</h2>
+                <h3 class="text-white text-6xl lg:text-7xl font-bold font-['Hurricane']"
+                  x-intersect="$el.classList.add('fadeInUp')">Your first</h3>
+                <h2 class="text-6xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">CLASS FREE
+                </h2>
               </header>
               <div class="lg:col-span-1">
                 <div class="flex items-center bg-white mb-4" x-intersect="$el.classList.add('fadeInUp')">
@@ -938,8 +975,10 @@
     <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
       <header class="lg:flex lg:items-end lg:justify-between mb-16">
         <div class="mb-10 lg:mb-0">
-          <h3 class="text-[#f41e1e] text-7xl lg:text-8xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Weekly</h3>
-          <h2 class="text-5xl lg:text-6xl text-white font-[anton]" x-intersect="$el.classList.add('fadeInUp')">SCHEDULES</h2>
+          <h3 class="text-[#f41e1e] text-7xl lg:text-8xl font-bold font-['Hurricane']"
+            x-intersect="$el.classList.add('fadeInUp')">Weekly</h3>
+          <h2 class="text-5xl lg:text-6xl text-white font-[anton]" x-intersect="$el.classList.add('fadeInUp')">SCHEDULES
+          </h2>
         </div>
         <div x-intersect="$el.classList.add('fadeInUp')">
           <a class="text-white font-bold flex items-center py-3 px-4 overflow-hidden group relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-14 hover:before:w-full before:h-full before:bg-[#f41e1e] before:transition-all before:duration-300 before:ease-[ease]"
@@ -957,7 +996,8 @@
         </div>
       </header>
       <div class="lg:grid lg:grid-cols-3 lg:gap-x-6">
-        <div class="card text-gray-400 border border-solid border-gray-400 mb-6" x-intersect="$el.classList.add('fadeInUp')">
+        <div class="card text-gray-400 border border-solid border-gray-400 mb-6"
+          x-intersect="$el.classList.add('fadeInUp')">
           <div class="text-white pt-6 px-4 mb-4">
             <div class="mb-2">
               <span class="text-sm font-medium bg-[#f41e1e] px-1 pb-[2px]">CLASSES</span>
@@ -977,7 +1017,8 @@
             </ul>
           </div>
         </div>
-        <div class="card text-gray-400 border border-solid border-gray-400 mb-6" x-intersect="$el.classList.add('fadeInUp')">
+        <div class="card text-gray-400 border border-solid border-gray-400 mb-6"
+          x-intersect="$el.classList.add('fadeInUp')">
           <div class="text-white pt-6 px-4 mb-4">
             <div class="mb-2">
               <span class="text-sm font-medium bg-[#f41e1e] px-1 pb-[2px]">CLASSES</span>
@@ -997,7 +1038,8 @@
             </ul>
           </div>
         </div>
-        <div class="card text-gray-400 border border-solid border-gray-400 mb-6" x-intersect="$el.classList.add('fadeInUp')">
+        <div class="card text-gray-400 border border-solid border-gray-400 mb-6"
+          x-intersect="$el.classList.add('fadeInUp')">
           <div class="text-white pt-6 px-4 mb-4">
             <div class="mb-2">
               <span class="text-sm font-medium bg-[#f41e1e] px-1 pb-[2px]">CLASSES</span>
@@ -1017,7 +1059,8 @@
             </ul>
           </div>
         </div>
-        <div class="card text-gray-400 border border-solid border-gray-400 mb-6" x-intersect="$el.classList.add('fadeInUp')">
+        <div class="card text-gray-400 border border-solid border-gray-400 mb-6"
+          x-intersect="$el.classList.add('fadeInUp')">
           <div class="text-white pt-6 px-4 mb-4">
             <div class="mb-2">
               <span class="text-sm font-medium bg-[#f41e1e] px-1 pb-[2px]">CLASSES</span>
@@ -1037,7 +1080,8 @@
             </ul>
           </div>
         </div>
-        <div class="card text-gray-400 border border-solid border-gray-400 mb-6" x-intersect="$el.classList.add('fadeInUp')">
+        <div class="card text-gray-400 border border-solid border-gray-400 mb-6"
+          x-intersect="$el.classList.add('fadeInUp')">
           <div class="text-white pt-6 px-4 mb-4">
             <div class="mb-2">
               <span class="text-sm font-medium bg-[#f41e1e] px-1 pb-[2px]">CLASSES</span>
@@ -1085,22 +1129,22 @@
   <section>
     <div class="container w-full max-w-screen-xl mx-auto py-16 lg:py-24 px-6 lg:px-0">
       <div class="lg:grid lg:grid-cols-2 lg:gap-x-16 mb-10">
-        <div class="mb-12 lg:mb-0">
+        <div class="mb-12 lg:mb-0" x-intersect="$el.classList.add('fadeInLeft')">
           <img src="/assets/images/hero_image_06.png" alt="">
         </div>
         <div class="flex items-center">
           <div>
             <header class="mb-6">
-              <h3 class="text-5xl text-black font-[anton] mb-6"><em class="text-transparent not-italic"
+              <h3 class="text-5xl text-black font-[anton] mb-6" x-intersect="$el.classList.add('fadeInUp')"><em class="text-transparent not-italic"
                   style="-webkit-text-stroke: 1px #1d1e21">#1</em> HIT / HIT</h3>
             </header>
-            <div class="font-[roboto] leading-normal mb-8">
+            <div class="font-[roboto] leading-normal mb-8" x-intersect="$el.classList.add('scale')">
               <p>HIIT workouts shift your body from periods of aerobic activity to periods of the best training tools
                 for developing a strong anaerobic activity. When your body is in and “aerobic mode,” your body is using
                 oxygen. When your body is in “anaerobic mode,” your body is using its stored energy instead of oxygen.
               </p>
             </div>
-            <div class="lg:flex lg:justify-between pr-16 mb-8">
+            <div class="lg:flex lg:justify-between pr-16 mb-8" x-intersect="$el.classList.add('fadeInUp')">
               <div class="flex items-center space-x-4 mb-6">
                 <span class="text-white bg-black rounded-full flex items-center justify-center w-8 h-8">
                   <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -1135,7 +1179,7 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div x-intersect="$el.classList.add('fadeInUp')">
               <a class="text-black hover:text-white font-medium border border-solid border-black transition-all duration-300 ease-[ease] origin-center py-2 px-4 relative before:absolute before:content-[''] before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
                 href="https://www.facebook.com/evernote/"><span class="relative">APPLY NOW</span></a>
             </div>
@@ -1143,21 +1187,21 @@
         </div>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:gap-x-16">
-        <div class="mb-12 lg:mb-0 lg:order-last">
+        <div class="mb-12 lg:mb-0 lg:order-last" x-intersect="$el.classList.add('fadeInRight')">
           <img src="/assets/images/hero_image_07.png" alt="">
         </div>
         <div class="flex items-center">
           <div>
             <header class="mb-6">
-              <h3 class="text-5xl text-black font-[anton] mb-6"><em class="text-transparent not-italic"
+              <h3 class="text-5xl text-black font-[anton] mb-6" x-intersect="$el.classList.add('fadeInUp')"><em class="text-transparent not-italic"
                   style="-webkit-text-stroke: 1px #1d1e21">#2</em> STRONGMAN</h3>
             </header>
-            <div class="font-[roboto] leading-normal mb-8">
+            <div class="font-[roboto] leading-normal mb-8" x-intersect="$el.classList.add('scale')">
               <p>Gymnastic rings are one of the best training tools for developing a strong and muscular upper body. One
                 look at the upper-body development of male gymnasts shows just how effective bodyweight training with
                 rings can be.</p>
             </div>
-            <div class="lg:flex lg:justify-between pr-16 mb-8">
+            <div class="lg:flex lg:justify-between pr-16 mb-8" x-intersect="$el.classList.add('fadeInUp')">
               <div class="flex items-center space-x-4 mb-6">
                 <span class="text-white bg-black rounded-full flex items-center justify-center w-8 h-8">
                   <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -1192,7 +1236,7 @@
                 </div>
               </div>
             </div>
-            <div>
+            <div x-intersect="$el.classList.add('fadeInUp')">
               <a class="text-black hover:text-white font-medium border border-solid border-black transition-all duration-300 ease-[ease] origin-center py-2 px-4 relative before:absolute before:content-[''] before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
                 href="https://www.facebook.com/evernote/"><span class="relative">APPLY NOW</span></a>
             </div>
@@ -1210,10 +1254,10 @@
     <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
       <header class="lg:flex lg:items-end lg:justify-between mb-16">
         <div class="mb-10 lg:mb-0">
-          <h3 class="text-[#f41e1e] text-7xl lg:text-8xl font-bold font-['Hurricane']">Devoted</h3>
-          <h2 class="text-white text-6xl lg:text-7xl font-[anton]">FITNESS COACHES</h2>
+          <h3 class="text-[#f41e1e] text-7xl lg:text-8xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Devoted</h3>
+          <h2 class="text-white text-6xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">FITNESS COACHES</h2>
         </div>
-        <div>
+        <div x-intersect="$el.classList.add('fadeInUp')">
           <a class="text-white font-bold inline-flex items-center py-4 pl-4 pr-8 overflow-hidden group relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-14 hover:before:w-full before:h-full before:bg-[#f41e1e] before:transition-all before:duration-300 before:ease-[ease]"
             href="">
             <span class="font-bold relative">ABOUT US</span>
@@ -1229,7 +1273,7 @@
         </div>
       </header>
       <div class="lg:grid lg:grid-cols-3 lg:gap-x-6">
-        <div class="relative group mb-6">
+        <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
           <div class="absolute text-white bg-[#f41e1e] w-16 h-16 top-6 left-6 z-10 flex items-center justify-center">
             <svg class="w-12 h-12 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
               <path
@@ -1300,7 +1344,7 @@
             </div>
           </div>
         </div>
-        <div class="relative group mb-6">
+        <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
           <div class="absolute text-white bg-[#f41e1e] w-16 h-16 top-6 left-6 z-10 flex items-center justify-center">
             <svg class="w-12 h-12 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
               <path
@@ -1371,7 +1415,7 @@
             </div>
           </div>
         </div>
-        <div class="relative group mb-6">
+        <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
           <div class="absolute text-white bg-[#f41e1e] w-16 h-16 top-6 left-6 z-10 flex items-center justify-center">
             <svg class="w-12 h-12 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
               <path
@@ -1469,18 +1513,18 @@
     <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
       <header class="mb-16">
         <div>
-          <h3 class="text-[#f41e1e] text-6xl font-bold font-['Hurricane']">Our clients’</h3>
-          <h2 class="text-5xl lg:text-6xl font-[anton]">TESTIMONIALS</h2>
+          <h3 class="text-[#f41e1e] text-6xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Our clients’</h3>
+          <h2 class="text-5xl lg:text-6xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">TESTIMONIALS</h2>
         </div>
       </header>
       <div class="flex items-center">
         <div class="flex-1 lg:grid lg:grid-cols-4">
-          <div class="lg:col-span-1 mb-8 lg:mb-0">
+          <div class="lg:col-span-1 mb-8 lg:mb-0" x-intersect="$el.classList.add('fadeInLeft')">
             <img :src="`/assets/images/${reviews[point].image}`" :alt="reviews[point].name">
           </div>
           <div class="lg:col-span-3 pr-6 lg:pr-16">
             <div class="py-8 bg-no-repeat bg-right-top lg:bg-[url('/assets/images/quote_sign_gray.png')]">
-              <div class="flex items-center space-x-2 mb-6">
+              <div class="flex items-center space-x-2 mb-6" x-intersect="$el.classList.add('scale')">
                 <span class="text-[#f41e1e]">
                   <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512">
@@ -1517,12 +1561,12 @@
                   </svg>
                 </span>
               </div>
-              <blockquote class="text-3xl lg:text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text">
+              <blockquote class="text-3xl lg:text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text" x-intersect="$el.classList.add('fadeInUp')">
               </blockquote>
-              <div class="mb-2">
+              <div class="mb-2" x-intersect="$el.classList.add('scale')">
                 <img src="/assets/images/signature_04.png" alt="">
               </div>
-              <div>
+              <div x-intersect="$el.classList.add('fadeInUp')">
                 <p class="text-lg font-medium" x-text="reviews[point].name"></p>
                 <p class="text-sm text-gray-500" x-text="reviews[point].position"></p>
               </div>
@@ -1548,8 +1592,8 @@
       <div class="lg:grid lg:grid-cols-2 lg:items-center">
         <div class="grid__item">
           <header class="mb-16">
-            <h3 class="text-[#f41e1e] text-6xl font-bold font-['Hurricane']">Question?</h3>
-            <h2 class="text-5xl lg:text-6xl font-[anton]">CONTACT US</h2>
+            <h3 class="text-[#f41e1e] text-6xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Question?</h3>
+            <h2 class="text-5xl lg:text-6xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">CONTACT US</h2>
           </header>
           <div class="input__contact">
             <div class="input__name">
@@ -1689,7 +1733,7 @@
       <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
         <div class="lg:grid lg:grid-cols-3">
           <div class="lg:col-span-1 mb-8">
-            <div class="mb-8">
+            <div class="mb-8" x-intersect="$el.classList.add('scale')">
               <img src="/assets/images/logo_footer.png" width="165" height="65" alt="">
             </div>
             <div class="text-gray-100">
@@ -1700,7 +1744,7 @@
             </div>
           </div>
           <div class="lg:col-span-2 lg:grid lg:grid-cols-4 lg:gap-x-4">
-            <div class="mb-8">
+            <div class="mb-8" x-intersect="$el.classList.add('scale')">
               <header class="mb-4">
                 <h4 class="text-[#f41e1e]">QUICKS LINKS</h4>
               </header>
@@ -1714,7 +1758,7 @@
                 </ul>
               </div>
             </div>
-            <div class="mb-8">
+            <div class="mb-8" x-intersect="$el.classList.add('scale')">
               <header class="mb-4">
                 <h4 class="text-[#f41e1e]">LOCATION & HOURS</h4>
               </header>
@@ -1727,7 +1771,7 @@
                 </div>
               </div>
             </div>
-            <div class="lg:col-span-2 mb-8">
+            <div class="lg:col-span-2 mb-8" x-intersect="$el.classList.add('scale')">
               <header class="mb-8">
                 <h4 class="text-[#f41e1e]">NEWSLETTER</h4>
               </header>
