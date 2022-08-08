@@ -395,84 +395,273 @@
       href=""><span class="relative">BECOME A MEMBER</span></a>
   </div>
 
-  <div class="transition-all duration-300 ease-[ease]" :class="{ 'mr-80': sideNav }">
-    <section>
-      <div
-        class="aspect-square lg:aspect-[21/9] relative bg-cover bg-center bg-no-repeat bg-[url('./../assets/images/hero_team.jpg')] flex items-center justify-center">
-        <div>
-          <h1 class="text-white text-6xl lg:text-8xl font-bold font-['Hurricane'] -rotate-12 underline mb-20 lg:mb-40">Our Team</h1>
+  <section>
+    <div class="aspect-square lg:aspect-[21/9] relative flex items-center justify-center overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full">
+        <img class="w-full h-full object-cover" src="./../assets/images/hero_team.jpg" alt="">
+      </div>
+      <div class="relative">
+        <h1 class="text-white text-6xl lg:text-8xl font-bold font-['Hurricane'] -rotate-12 underline mb-20 lg:mb-40">Our
+          Team</h1>
+      </div>
+      <div class="absolute bottom-0 left-0 w-full z-10">
+        <img src="./../assets/images/white_bottom_wave_01.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
+      <div class="lg:grid lg:grid-cols-2 lg:gap-x-16">
+        <div class="mb-12 lg:mb-0" x-intersect="$el.classList.add('fadeInLeft')">
+          <img src="./../assets/images/inner_team_01.png" alt="">
         </div>
-        <div
-          class="absolute left-0 bottom-0 w-full bg-contain bg-bottom bg-no-repeat aspect-[21/3] bg-[url('./../images/white_bottom_wave_01.png')]">
+        <div class="flex items-center">
+          <div>
+            <header class="mb-6">
+              <h3 class="text-5xl text-black font-[anton] mb-6" x-intersect="$el.classList.add('fadeInUp')">THOMAS
+                HOEFLER</h3>
+              <p class="font-[roboto]" x-intersect="$el.classList.add('fadeInUp')"><strong>K11 Certified Personal
+                  Trainer</strong></p>
+            </header>
+            <div class="font-[roboto] leading-normal mb-8" x-intersect="$el.classList.add('fadeInUp')">
+              <p>Going to the gym started off as a hobby. Later it became something that I was truly passionate about.
+                As
+                I continued to work on my strength I came to the realization that perhaps I could not only better
+                myself,
+                but others as well. As I continue my journey, I hope to spread my knowledge I was truly it became to
+                others and help them better themselves and feel more confident.</p>
+            </div>
+            <div class="lg:flex lg:justify-between border-b border-solid border-gray-300 pr-16 mb-8"
+              x-intersect="$el.classList.add('fadeInUp')">
+              <div class="flex items-center space-x-4 mb-6">
+                <span class="text-white bg-[#fe5000] rounded-full flex items-center justify-center w-10 h-10">
+                  <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M287.1 424.9L186.5 320h-66.78l145.2 150.2C271.3 476.7 279.6 480 287.1 480c8.332 0 16.69-3.268 23.01-9.805L456.2 320h-66.78L287.1 424.9zM495.2 62.86C471 41.92 440.1 31.1 410.8 32c-37.49 0-75.41 15.34-103.1 43.92L288 96.25L268.3 75.92C240.6 47.34 202.7 32 165.2 32C135.1 32 104.1 41.92 80.81 62.86C18.66 116.7 15.8 212.5 71.82 270.5l16.73 17.53l97.16 .0313l29.88-71.75l56.88 126.4c5.5 12.25 22.88 12.62 28.88 .625l49.75-99.5l22.12 44.25l114.2-.0313l16.73-17.53C560.2 212.5 557.4 116.6 495.2 62.86zM469.6 237.1l-18.31 18.93h-58.33l-27.62-55.25c-5.875-11.75-22.62-11.75-28.5 0l-49 98L229.7 169.4c-5.75-12.75-24-12.5-29.38 .375l-36 86.25H124.6L106.3 237.1C74.1 203.8 66.46 138.1 112.5 99.15c39.9-34.54 94.59-17.5 121.4 10.17l54.17 55.92l54.16-55.92c26.42-27.27 81.26-44.89 121.4-10.17C509.1 138.6 502.5 203.1 469.6 237.1z" />
+                  </svg>
+                </span>
+                <div class="text-xl font-[anton]">
+                  <span>CARDIO</span>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4 mb-6">
+                <span class="text-white bg-[#fe5000] rounded-full flex items-center justify-center w-10 h-10">
+                  <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path
+                      d="M608 224V152C608 121.1 582.9 96 552 96h-32C517.3 96 514.6 96.38 512 96.75V88C512 57.07 486.9 32 456 32h-32c-30.93 0-56 25.07-56 56V224h-96V88C272 57.07 246.9 32 216 32h-32C153.1 32 128 57.07 128 88v8.75C125.4 96.38 122.8 96 120 96h-32C57.07 96 32 121.1 32 152V224C14.4 224 0 238.4 0 256s14.4 32 31.1 32L32 360C32 390.9 57.07 416 88 416h32c2.75 0 5.375-.375 8-.75V424C128 454.9 153.1 480 184 480h32c30.93 0 56-25.07 56-56V288h96v136c0 30.93 25.07 56 56 56h32c30.93 0 56-25.07 56-56v-8.75C514.6 415.6 517.3 416 520 416h32c30.93 0 56-25.07 56-56V288c17.6 0 32-14.4 32-32S625.6 224 608 224zM120 368h-32c-4.375 0-8-3.625-8-8v-208c0-4.375 3.625-8 8-8h32C124.4 144 128 147.6 128 152v208C128 364.4 124.4 368 120 368zM224 424c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8V88c0-4.375 3.625-8 8-8h32C220.4 80 224 83.62 224 88V424zM464 424c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8V88c0-4.375 3.625-8 8-8h32c4.375 0 8 3.625 8 8V424zM560 360c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8v-208c0-4.375 3.625-8 8-8h32c4.375 0 8 3.625 8 8V360z" />
+                  </svg>
+                </span>
+                <div class="text-xl font-[anton]">
+                  <span>GYM</span>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4 mb-6">
+                <span class="text-white bg-[#fe5000] rounded-full flex items-center justify-center w-10 h-10">
+                  <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                    <path
+                      d="M320 73.61V48C320 21.6 298.4 0 272 0h-160C85.6 0 64 21.6 64 48v25.61C27.48 81.03 0 113.3 0 152v208c0 38.7 27.48 70.97 64 78.39V464C64 490.4 85.6 512 112 512h160c26.4 0 48-21.6 48-48v-25.61c36.52-7.414 64-39.68 64-78.39v-208C384 113.3 356.5 81.03 320 73.61zM336 360c0 17.64-14.36 32-32 32h-224c-17.64 0-32-14.36-32-32v-208c0-17.64 14.36-32 32-32h224c17.64 0 32 14.36 32 32V360zM199.2 191.8L192 198.1L184.8 191.8C166.5 173.3 136.8 170.3 116.8 186.9c-22.92 19.17-24.07 53.55-3.646 74.29l70.64 71.37C185.1 334.8 188.9 336 192 336s6.043-1.25 8.23-3.441l70.64-71.37c20.42-20.73 19.28-55.12-3.646-74.29C247.2 170.3 217.5 173.3 199.2 191.8z" />
+                  </svg>
+                </span>
+                <div class="text-xl font-[anton]">
+                  <span>BOULDER</span>
+                </div>
+              </div>
+            </div>
+            <div x-intersect="$el.classList.add('fadeInUp')">
+              <ul class="flex items-center space-x-4">
+                <li>
+                  <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
+                    href="https://www.facebook.com/evernote/">
+                    <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                      <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                      </path>
+                    </svg>
+                    <!-- Facebook -->
+                  </a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
+                    href="https://www.instagram.com/evernote">
+                    <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                      </path>
+                    </svg>
+                    <!-- Instagram -->
+                  </a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
+                    href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
+                    <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path
+                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                      </path>
+                    </svg>
+                    <!-- YouTube -->
+                  </a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
+                    href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
+                    <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path
+                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                    </svg>
+                    <!-- Linked-in -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
-        <div class="lg:grid lg:grid-cols-2 lg:gap-x-16">
-          <div class="mb-12 lg:mb-0" x-intersect="$el.classList.add('fadeInLeft')">
-            <img src="./../assets/images/inner_team_01.png" alt="">
+  <section>
+    <div class="container w-full max-w-screen-xl mx-auto pt-4 pb-8 px-6 lg:px-0">
+      <div class="lg:grid lg:grid-cols-2 lg:gap-x-16">
+        <div class="lg:order-last mb-12 lg:mb-0" x-intersect="$el.classList.add('fadeInRight')">
+          <img src="./../assets/images/inner_team_02.png" alt="">
+        </div>
+        <div class="flex items-center">
+          <div>
+            <header class="mb-6">
+              <h3 class="text-5xl text-black font-[anton] mb-6" x-intersect="$el.classList.add('fadeInUp')">BARBARA
+                CORRS</h3>
+              <p class="font-[roboto]" x-intersect="$el.classList.add('fadeInUp')"><strong>K11 Certified Personal
+                  Trainer</strong></p>
+            </header>
+            <div class="font-[roboto] leading-normal mb-8" x-intersect="$el.classList.add('fadeInUp')">
+              <p>Build your dream body the way it when you want it. Our customised personal training protocol
+                guarantees
+                you that well define physique for sure. Certified in a variety of classes and has been teaching for
+                over
+                10 years. Lorem ipsum dolor sit amet, protocol guarantees you consectetur adipiscing elit.</p>
+            </div>
+            <div class="lg:flex lg:justify-between border-b border-solid border-gray-300 pr-16 lg:pr-32 mb-8"
+              x-intersect="$el.classList.add('fadeInUp')">
+              <div class="flex items-center space-x-4 mb-6">
+                <span class="text-white bg-[#fe5000] rounded-full flex items-center justify-center w-10 h-10">
+                  <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path
+                      d="M287.1 424.9L186.5 320h-66.78l145.2 150.2C271.3 476.7 279.6 480 287.1 480c8.332 0 16.69-3.268 23.01-9.805L456.2 320h-66.78L287.1 424.9zM495.2 62.86C471 41.92 440.1 31.1 410.8 32c-37.49 0-75.41 15.34-103.1 43.92L288 96.25L268.3 75.92C240.6 47.34 202.7 32 165.2 32C135.1 32 104.1 41.92 80.81 62.86C18.66 116.7 15.8 212.5 71.82 270.5l16.73 17.53l97.16 .0313l29.88-71.75l56.88 126.4c5.5 12.25 22.88 12.62 28.88 .625l49.75-99.5l22.12 44.25l114.2-.0313l16.73-17.53C560.2 212.5 557.4 116.6 495.2 62.86zM469.6 237.1l-18.31 18.93h-58.33l-27.62-55.25c-5.875-11.75-22.62-11.75-28.5 0l-49 98L229.7 169.4c-5.75-12.75-24-12.5-29.38 .375l-36 86.25H124.6L106.3 237.1C74.1 203.8 66.46 138.1 112.5 99.15c39.9-34.54 94.59-17.5 121.4 10.17l54.17 55.92l54.16-55.92c26.42-27.27 81.26-44.89 121.4-10.17C509.1 138.6 502.5 203.1 469.6 237.1z" />
+                  </svg>
+                </span>
+                <div class="text-xl font-[anton]">
+                  <span>MAT PILATES</span>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4 mb-6">
+                <span class="text-white bg-[#fe5000] rounded-full flex items-center justify-center w-10 h-10">
+                  <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                    <path
+                      d="M608 224V152C608 121.1 582.9 96 552 96h-32C517.3 96 514.6 96.38 512 96.75V88C512 57.07 486.9 32 456 32h-32c-30.93 0-56 25.07-56 56V224h-96V88C272 57.07 246.9 32 216 32h-32C153.1 32 128 57.07 128 88v8.75C125.4 96.38 122.8 96 120 96h-32C57.07 96 32 121.1 32 152V224C14.4 224 0 238.4 0 256s14.4 32 31.1 32L32 360C32 390.9 57.07 416 88 416h32c2.75 0 5.375-.375 8-.75V424C128 454.9 153.1 480 184 480h32c30.93 0 56-25.07 56-56V288h96v136c0 30.93 25.07 56 56 56h32c30.93 0 56-25.07 56-56v-8.75C514.6 415.6 517.3 416 520 416h32c30.93 0 56-25.07 56-56V288c17.6 0 32-14.4 32-32S625.6 224 608 224zM120 368h-32c-4.375 0-8-3.625-8-8v-208c0-4.375 3.625-8 8-8h32C124.4 144 128 147.6 128 152v208C128 364.4 124.4 368 120 368zM224 424c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8V88c0-4.375 3.625-8 8-8h32C220.4 80 224 83.62 224 88V424zM464 424c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8V88c0-4.375 3.625-8 8-8h32c4.375 0 8 3.625 8 8V424zM560 360c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8v-208c0-4.375 3.625-8 8-8h32c4.375 0 8 3.625 8 8V360z" />
+                  </svg>
+                </span>
+                <div class="text-xl font-[anton]">
+                  <span>POWER YOGA</span>
+                </div>
+              </div>
+            </div>
+            <div x-intersect="$el.classList.add('fadeInUp')">
+              <ul class="flex items-center space-x-4">
+                <li>
+                  <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
+                    href="https://www.facebook.com/evernote/">
+                    <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                      <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                      </path>
+                    </svg>
+                    <!-- Facebook -->
+                  </a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
+                    href="https://www.instagram.com/evernote">
+                    <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                      </path>
+                    </svg>
+                    <!-- Instagram -->
+                  </a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
+                    href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
+                    <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                      <path
+                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                      </path>
+                    </svg>
+                    <!-- YouTube -->
+                  </a>
+                </li>
+                <li>
+                  <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
+                    href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
+                    <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                      <path
+                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                    </svg>
+                    <!-- Linked-in -->
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="flex items-center">
-            <div>
-              <header class="mb-6">
-                <h3 class="text-5xl text-black font-[anton] mb-6" x-intersect="$el.classList.add('fadeInUp')">THOMAS
-                  HOEFLER</h3>
-                <p class="font-[roboto]" x-intersect="$el.classList.add('fadeInUp')"><strong>K11 Certified Personal
-                    Trainer</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
+      <header class="lg:flex lg:items-end lg:justify-between mb-16">
+        <div class="mb-10 lg:mb-0">
+          <h3 class="text-[#fe5000] text-7xl lg:text-8xl font-bold font-['Hurricane']"
+            x-intersect="$el.classList.add('fadeInUp')">Devoted</h3>
+          <h2 class="text-5xl lg:text-6xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">FITNESS COACHES
+          </h2>
+        </div>
+        <div x-intersect="$el.classList.add('scale')">
+          <a class="text-gray-700 font-bold inline-flex items-center py-3 pl-4 pr-8 overflow-hidden group relative before:absolute before:content-[''] before:-left-4 before:top-0 before:w-14 hover:before:w-full before:h-full before:skew-x-[-20deg] before:bg-[#fe5000] before:transition-all before:duration-300 before:ease-[ease]"
+            href="">
+            <span class="font-bold relative">START TODAY</span>
+            <span class="w-3 ml-1 relative">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                class="fill-current -rotate-45 group-hover:rotate-0 transition-all duration-300 ease-[ease]">
+                <path
+                  d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
+                </path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </header>
+      <div class="lg:grid lg:grid-cols-3 lg:gap-x-6">
+        <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
+          <div class="overflow-hidden">
+            <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
+              src="./../assets/images/team_04.jpg" alt="">
+          </div>
+          <div class="absolute left-0 bottom-6 lg:bottom-10 w-full px-6 overflow-hidden">
+            <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
+              <header class="border-b border-solid border-white pb-4 mb-4">
+                <h4 class="text-4xl text-white font-[anton] mb-3">NICOLAS THOMSON</h4>
+                <p class="text-white font-['roboto']">Nutrition Expert</p>
               </header>
-              <div class="font-[roboto] leading-normal mb-8" x-intersect="$el.classList.add('fadeInUp')">
-                <p>Going to the gym started off as a hobby. Later it became something that I was truly passionate about.
-                  As
-                  I continued to work on my strength I came to the realization that perhaps I could not only better
-                  myself,
-                  but others as well. As I continue my journey, I hope to spread my knowledge I was truly it became to
-                  others and help them better themselves and feel more confident.</p>
-              </div>
-              <div class="lg:flex lg:justify-between border-b border-solid border-gray-300 pr-16 mb-8"
-                x-intersect="$el.classList.add('fadeInUp')">
-                <div class="flex items-center space-x-4 mb-6">
-                  <span class="text-white bg-[#fe5000] rounded-full flex items-center justify-center w-10 h-10">
-                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                      <path
-                        d="M287.1 424.9L186.5 320h-66.78l145.2 150.2C271.3 476.7 279.6 480 287.1 480c8.332 0 16.69-3.268 23.01-9.805L456.2 320h-66.78L287.1 424.9zM495.2 62.86C471 41.92 440.1 31.1 410.8 32c-37.49 0-75.41 15.34-103.1 43.92L288 96.25L268.3 75.92C240.6 47.34 202.7 32 165.2 32C135.1 32 104.1 41.92 80.81 62.86C18.66 116.7 15.8 212.5 71.82 270.5l16.73 17.53l97.16 .0313l29.88-71.75l56.88 126.4c5.5 12.25 22.88 12.62 28.88 .625l49.75-99.5l22.12 44.25l114.2-.0313l16.73-17.53C560.2 212.5 557.4 116.6 495.2 62.86zM469.6 237.1l-18.31 18.93h-58.33l-27.62-55.25c-5.875-11.75-22.62-11.75-28.5 0l-49 98L229.7 169.4c-5.75-12.75-24-12.5-29.38 .375l-36 86.25H124.6L106.3 237.1C74.1 203.8 66.46 138.1 112.5 99.15c39.9-34.54 94.59-17.5 121.4 10.17l54.17 55.92l54.16-55.92c26.42-27.27 81.26-44.89 121.4-10.17C509.1 138.6 502.5 203.1 469.6 237.1z" />
-                    </svg>
-                  </span>
-                  <div class="text-xl font-[anton]">
-                    <span>CARDIO</span>
-                  </div>
-                </div>
-                <div class="flex items-center space-x-4 mb-6">
-                  <span class="text-white bg-[#fe5000] rounded-full flex items-center justify-center w-10 h-10">
-                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                      <path
-                        d="M608 224V152C608 121.1 582.9 96 552 96h-32C517.3 96 514.6 96.38 512 96.75V88C512 57.07 486.9 32 456 32h-32c-30.93 0-56 25.07-56 56V224h-96V88C272 57.07 246.9 32 216 32h-32C153.1 32 128 57.07 128 88v8.75C125.4 96.38 122.8 96 120 96h-32C57.07 96 32 121.1 32 152V224C14.4 224 0 238.4 0 256s14.4 32 31.1 32L32 360C32 390.9 57.07 416 88 416h32c2.75 0 5.375-.375 8-.75V424C128 454.9 153.1 480 184 480h32c30.93 0 56-25.07 56-56V288h96v136c0 30.93 25.07 56 56 56h32c30.93 0 56-25.07 56-56v-8.75C514.6 415.6 517.3 416 520 416h32c30.93 0 56-25.07 56-56V288c17.6 0 32-14.4 32-32S625.6 224 608 224zM120 368h-32c-4.375 0-8-3.625-8-8v-208c0-4.375 3.625-8 8-8h32C124.4 144 128 147.6 128 152v208C128 364.4 124.4 368 120 368zM224 424c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8V88c0-4.375 3.625-8 8-8h32C220.4 80 224 83.62 224 88V424zM464 424c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8V88c0-4.375 3.625-8 8-8h32c4.375 0 8 3.625 8 8V424zM560 360c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8v-208c0-4.375 3.625-8 8-8h32c4.375 0 8 3.625 8 8V360z" />
-                    </svg>
-                  </span>
-                  <div class="text-xl font-[anton]">
-                    <span>GYM</span>
-                  </div>
-                </div>
-                <div class="flex items-center space-x-4 mb-6">
-                  <span class="text-white bg-[#fe5000] rounded-full flex items-center justify-center w-10 h-10">
-                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                      <path
-                        d="M320 73.61V48C320 21.6 298.4 0 272 0h-160C85.6 0 64 21.6 64 48v25.61C27.48 81.03 0 113.3 0 152v208c0 38.7 27.48 70.97 64 78.39V464C64 490.4 85.6 512 112 512h160c26.4 0 48-21.6 48-48v-25.61c36.52-7.414 64-39.68 64-78.39v-208C384 113.3 356.5 81.03 320 73.61zM336 360c0 17.64-14.36 32-32 32h-224c-17.64 0-32-14.36-32-32v-208c0-17.64 14.36-32 32-32h224c17.64 0 32 14.36 32 32V360zM199.2 191.8L192 198.1L184.8 191.8C166.5 173.3 136.8 170.3 116.8 186.9c-22.92 19.17-24.07 53.55-3.646 74.29l70.64 71.37C185.1 334.8 188.9 336 192 336s6.043-1.25 8.23-3.441l70.64-71.37c20.42-20.73 19.28-55.12-3.646-74.29C247.2 170.3 217.5 173.3 199.2 191.8z" />
-                    </svg>
-                  </span>
-                  <div class="text-xl font-[anton]">
-                    <span>BOULDER</span>
-                  </div>
-                </div>
-              </div>
-              <div x-intersect="$el.classList.add('fadeInUp')">
+              <div class="flex items-center justify-between">
                 <ul class="flex items-center space-x-4">
-                  <li>
-                    <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
-                      href="https://www.facebook.com/evernote/">
-                      <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 320 512">
+                  <li class="text-[#fe5000] hover:text-white">
+                    <a href="https://www.facebook.com/evernote/">
+                      <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                         <path
                           d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
                         </path>
@@ -480,11 +669,10 @@
                       <!-- Facebook -->
                     </a>
                   </li>
-                  <li>
-                    <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
-                      href="https://www.instagram.com/evernote">
-                      <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512">
+                  <li class="text-[#fe5000] hover:text-white">
+                    <a href="https://www.instagram.com/evernote">
+                      <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path
                           d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
                         </path>
@@ -492,11 +680,10 @@
                       <!-- Instagram -->
                     </a>
                   </li>
-                  <li>
-                    <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
-                      href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
-                      <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 576 512">
+                  <li class="text-[#fe5000] hover:text-white">
+                    <a href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
+                      <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                         <path
                           d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
                         </path>
@@ -504,78 +691,41 @@
                       <!-- YouTube -->
                     </a>
                   </li>
-                  <li>
-                    <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
-                      href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
-                      <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512">
-                        <path
-                          d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
-                      </svg>
-                      <!-- Linked-in -->
-                    </a>
-                  </li>
                 </ul>
+                <div>
+                  <a class="text-white hover:text-[#fe5000] font-bold inline-flex items-center" href="">
+                    <span class="font-bold transition-all duration-300 ease-[ease]">FULL PROFILE</span>
+                    <span class="w-3 ml-1 relative">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        class="fill-current transition-all duration-300 ease-[ease]">
+                        <path
+                          d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
+                        </path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container w-full max-w-screen-xl mx-auto pt-4 pb-8 px-6 lg:px-0">
-        <div class="lg:grid lg:grid-cols-2 lg:gap-x-16">
-          <div class="lg:order-last mb-12 lg:mb-0" x-intersect="$el.classList.add('fadeInRight')">
-            <img src="./../assets/images/inner_team_02.png" alt="">
+        <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
+          <div class="overflow-hidden">
+            <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
+              src="./../assets/images/team_05.jpg" alt="">
           </div>
-          <div class="flex items-center">
-            <div>
-              <header class="mb-6">
-                <h3 class="text-5xl text-black font-[anton] mb-6" x-intersect="$el.classList.add('fadeInUp')">BARBARA
-                  CORRS</h3>
-                <p class="font-[roboto]" x-intersect="$el.classList.add('fadeInUp')"><strong>K11 Certified Personal
-                    Trainer</strong></p>
+          <div class="absolute left-0 bottom-6 lg:bottom-10 w-full px-6 overflow-hidden">
+            <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
+              <header class="border-b border-solid border-white pb-4 mb-4">
+                <h4 class="text-4xl text-white font-[anton] mb-3">CHRISTOPHER RONAN</h4>
+                <p class="text-white font-['roboto']">CrossFit / Strongman / Personal</p>
               </header>
-              <div class="font-[roboto] leading-normal mb-8" x-intersect="$el.classList.add('fadeInUp')">
-                <p>Build your dream body the way it when you want it. Our customised personal training protocol
-                  guarantees
-                  you that well define physique for sure. Certified in a variety of classes and has been teaching for
-                  over
-                  10 years. Lorem ipsum dolor sit amet, protocol guarantees you consectetur adipiscing elit.</p>
-              </div>
-              <div class="lg:flex lg:justify-between border-b border-solid border-gray-300 pr-16 lg:pr-32 mb-8"
-                x-intersect="$el.classList.add('fadeInUp')">
-                <div class="flex items-center space-x-4 mb-6">
-                  <span class="text-white bg-[#fe5000] rounded-full flex items-center justify-center w-10 h-10">
-                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                      <path
-                        d="M287.1 424.9L186.5 320h-66.78l145.2 150.2C271.3 476.7 279.6 480 287.1 480c8.332 0 16.69-3.268 23.01-9.805L456.2 320h-66.78L287.1 424.9zM495.2 62.86C471 41.92 440.1 31.1 410.8 32c-37.49 0-75.41 15.34-103.1 43.92L288 96.25L268.3 75.92C240.6 47.34 202.7 32 165.2 32C135.1 32 104.1 41.92 80.81 62.86C18.66 116.7 15.8 212.5 71.82 270.5l16.73 17.53l97.16 .0313l29.88-71.75l56.88 126.4c5.5 12.25 22.88 12.62 28.88 .625l49.75-99.5l22.12 44.25l114.2-.0313l16.73-17.53C560.2 212.5 557.4 116.6 495.2 62.86zM469.6 237.1l-18.31 18.93h-58.33l-27.62-55.25c-5.875-11.75-22.62-11.75-28.5 0l-49 98L229.7 169.4c-5.75-12.75-24-12.5-29.38 .375l-36 86.25H124.6L106.3 237.1C74.1 203.8 66.46 138.1 112.5 99.15c39.9-34.54 94.59-17.5 121.4 10.17l54.17 55.92l54.16-55.92c26.42-27.27 81.26-44.89 121.4-10.17C509.1 138.6 502.5 203.1 469.6 237.1z" />
-                    </svg>
-                  </span>
-                  <div class="text-xl font-[anton]">
-                    <span>MAT PILATES</span>
-                  </div>
-                </div>
-                <div class="flex items-center space-x-4 mb-6">
-                  <span class="text-white bg-[#fe5000] rounded-full flex items-center justify-center w-10 h-10">
-                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                      <path
-                        d="M608 224V152C608 121.1 582.9 96 552 96h-32C517.3 96 514.6 96.38 512 96.75V88C512 57.07 486.9 32 456 32h-32c-30.93 0-56 25.07-56 56V224h-96V88C272 57.07 246.9 32 216 32h-32C153.1 32 128 57.07 128 88v8.75C125.4 96.38 122.8 96 120 96h-32C57.07 96 32 121.1 32 152V224C14.4 224 0 238.4 0 256s14.4 32 31.1 32L32 360C32 390.9 57.07 416 88 416h32c2.75 0 5.375-.375 8-.75V424C128 454.9 153.1 480 184 480h32c30.93 0 56-25.07 56-56V288h96v136c0 30.93 25.07 56 56 56h32c30.93 0 56-25.07 56-56v-8.75C514.6 415.6 517.3 416 520 416h32c30.93 0 56-25.07 56-56V288c17.6 0 32-14.4 32-32S625.6 224 608 224zM120 368h-32c-4.375 0-8-3.625-8-8v-208c0-4.375 3.625-8 8-8h32C124.4 144 128 147.6 128 152v208C128 364.4 124.4 368 120 368zM224 424c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8V88c0-4.375 3.625-8 8-8h32C220.4 80 224 83.62 224 88V424zM464 424c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8V88c0-4.375 3.625-8 8-8h32c4.375 0 8 3.625 8 8V424zM560 360c0 4.375-3.625 8-8 8h-32c-4.375 0-8-3.625-8-8v-208c0-4.375 3.625-8 8-8h32c4.375 0 8 3.625 8 8V360z" />
-                    </svg>
-                  </span>
-                  <div class="text-xl font-[anton]">
-                    <span>POWER YOGA</span>
-                  </div>
-                </div>
-              </div>
-              <div x-intersect="$el.classList.add('fadeInUp')">
+              <div class="flex items-center justify-between">
                 <ul class="flex items-center space-x-4">
-                  <li>
-                    <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
-                      href="https://www.facebook.com/evernote/">
-                      <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 320 512">
+                  <li class="text-[#fe5000] hover:text-white">
+                    <a href="https://www.facebook.com/evernote/">
+                      <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                         <path
                           d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
                         </path>
@@ -583,11 +733,10 @@
                       <!-- Facebook -->
                     </a>
                   </li>
-                  <li>
-                    <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
-                      href="https://www.instagram.com/evernote">
-                      <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512">
+                  <li class="text-[#fe5000] hover:text-white">
+                    <a href="https://www.instagram.com/evernote">
+                      <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path
                           d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
                         </path>
@@ -595,11 +744,10 @@
                       <!-- Instagram -->
                     </a>
                   </li>
-                  <li>
-                    <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
-                      href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
-                      <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 576 512">
+                  <li class="text-[#fe5000] hover:text-white">
+                    <a href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
+                      <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                         <path
                           d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
                         </path>
@@ -607,247 +755,93 @@
                       <!-- YouTube -->
                     </a>
                   </li>
-                  <li>
-                    <a class="text-black hover:text-white rounded-full border border-solid border-black w-10 h-10 flex items-center justify-center transition-all duration-300 ease-[ease] origin-center before:absolute before:content-[''] before:w-10 before:h-10 before:bg-black before:rounded-full before:scale-0 hover:before:scale-100 before:origin-center before:transition-all before:duration-300 before:ease-[ease]"
-                      href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
-                      <svg class="w-4 h-4 fill-current relative" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512">
+                </ul>
+                <div>
+                  <a class="text-white hover:text-[#fe5000] font-bold inline-flex items-center" href="">
+                    <span class="font-bold transition-all duration-300 ease-[ease]">FULL PROFILE</span>
+                    <span class="w-3 ml-1 relative">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        class="fill-current transition-all duration-300 ease-[ease]">
                         <path
-                          d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                          d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
+                        </path>
                       </svg>
-                      <!-- Linked-in -->
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
+          <div class="overflow-hidden">
+            <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
+              src="./../assets/images/team_06.jpg" alt="">
+          </div>
+          <div class="absolute left-0 bottom-6 lg:bottom-10 w-full px-6 overflow-hidden">
+            <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
+              <header class="border-b border-solid border-white pb-4 mb-4">
+                <h4 class="text-4xl text-white font-[anton] mb-3">SAMANTHA PAUL - SMITH</h4>
+                <p class="text-white font-['roboto']">Mat Pilates / Power Yoga</p>
+              </header>
+              <div class="flex items-center justify-between">
+                <ul class="flex items-center space-x-4">
+                  <li class="text-[#fe5000] hover:text-white">
+                    <a href="https://www.facebook.com/evernote/">
+                      <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                        </path>
+                      </svg>
+                      <!-- Facebook -->
+                    </a>
+                  </li>
+                  <li class="text-[#fe5000] hover:text-white">
+                    <a href="https://www.instagram.com/evernote">
+                      <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                        </path>
+                      </svg>
+                      <!-- Instagram -->
+                    </a>
+                  </li>
+                  <li class="text-[#fe5000] hover:text-white">
+                    <a href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
+                      <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path
+                          d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                        </path>
+                      </svg>
+                      <!-- YouTube -->
                     </a>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
-        <header class="lg:flex lg:items-end lg:justify-between mb-16">
-          <div class="mb-10 lg:mb-0">
-            <h3 class="text-[#fe5000] text-7xl lg:text-8xl font-bold font-['Hurricane']"
-              x-intersect="$el.classList.add('fadeInUp')">Devoted</h3>
-            <h2 class="text-5xl lg:text-6xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">FITNESS COACHES
-            </h2>
-          </div>
-          <div x-intersect="$el.classList.add('scale')">
-            <a class="text-gray-700 font-bold inline-flex items-center py-3 pl-4 pr-8 overflow-hidden group relative before:absolute before:content-[''] before:-left-4 before:top-0 before:w-14 hover:before:w-full before:h-full before:skew-x-[-20deg] before:bg-[#fe5000] before:transition-all before:duration-300 before:ease-[ease]"
-              href="">
-              <span class="font-bold relative">START TODAY</span>
-              <span class="w-3 ml-1 relative">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                  class="fill-current -rotate-45 group-hover:rotate-0 transition-all duration-300 ease-[ease]">
-                  <path
-                    d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
-                  </path>
-                </svg>
-              </span>
-            </a>
-          </div>
-        </header>
-        <div class="lg:grid lg:grid-cols-3 lg:gap-x-6">
-          <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
-            <div class="overflow-hidden">
-              <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                src="./../assets/images/team_04.jpg" alt="">
-            </div>
-            <div class="absolute left-0 bottom-6 lg:bottom-10 w-full px-6 overflow-hidden">
-              <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
-                <header class="border-b border-solid border-white pb-4 mb-4">
-                  <h4 class="text-4xl text-white font-[anton] mb-3">NICOLAS THOMSON</h4>
-                  <p class="text-white font-['roboto']">Nutrition Expert</p>
-                </header>
-                <div class="flex items-center justify-between">
-                  <ul class="flex items-center space-x-4">
-                    <li class="text-[#fe5000] hover:text-white">
-                      <a href="https://www.facebook.com/evernote/">
-                        <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
-                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                          <path
-                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                          </path>
-                        </svg>
-                        <!-- Facebook -->
-                      </a>
-                    </li>
-                    <li class="text-[#fe5000] hover:text-white">
-                      <a href="https://www.instagram.com/evernote">
-                        <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
-                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                          <path
-                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                          </path>
-                        </svg>
-                        <!-- Instagram -->
-                      </a>
-                    </li>
-                    <li class="text-[#fe5000] hover:text-white">
-                      <a href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
-                        <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
-                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                          <path
-                            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                          </path>
-                        </svg>
-                        <!-- YouTube -->
-                      </a>
-                    </li>
-                  </ul>
-                  <div>
-                    <a class="text-white hover:text-[#fe5000] font-bold inline-flex items-center" href="">
-                      <span class="font-bold transition-all duration-300 ease-[ease]">FULL PROFILE</span>
-                      <span class="w-3 ml-1 relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                          class="fill-current transition-all duration-300 ease-[ease]">
-                          <path
-                            d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
-                          </path>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
-            <div class="overflow-hidden">
-              <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                src="./../assets/images/team_05.jpg" alt="">
-            </div>
-            <div class="absolute left-0 bottom-6 lg:bottom-10 w-full px-6 overflow-hidden">
-              <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
-                <header class="border-b border-solid border-white pb-4 mb-4">
-                  <h4 class="text-4xl text-white font-[anton] mb-3">CHRISTOPHER RONAN</h4>
-                  <p class="text-white font-['roboto']">CrossFit / Strongman / Personal</p>
-                </header>
-                <div class="flex items-center justify-between">
-                  <ul class="flex items-center space-x-4">
-                    <li class="text-[#fe5000] hover:text-white">
-                      <a href="https://www.facebook.com/evernote/">
-                        <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
-                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                          <path
-                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                          </path>
-                        </svg>
-                        <!-- Facebook -->
-                      </a>
-                    </li>
-                    <li class="text-[#fe5000] hover:text-white">
-                      <a href="https://www.instagram.com/evernote">
-                        <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
-                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                          <path
-                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                          </path>
-                        </svg>
-                        <!-- Instagram -->
-                      </a>
-                    </li>
-                    <li class="text-[#fe5000] hover:text-white">
-                      <a href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
-                        <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
-                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                          <path
-                            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                          </path>
-                        </svg>
-                        <!-- YouTube -->
-                      </a>
-                    </li>
-                  </ul>
-                  <div>
-                    <a class="text-white hover:text-[#fe5000] font-bold inline-flex items-center" href="">
-                      <span class="font-bold transition-all duration-300 ease-[ease]">FULL PROFILE</span>
-                      <span class="w-3 ml-1 relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                          class="fill-current transition-all duration-300 ease-[ease]">
-                          <path
-                            d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
-                          </path>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
-            <div class="overflow-hidden">
-              <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                src="./../assets/images/team_06.jpg" alt="">
-            </div>
-            <div class="absolute left-0 bottom-6 lg:bottom-10 w-full px-6 overflow-hidden">
-              <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
-                <header class="border-b border-solid border-white pb-4 mb-4">
-                  <h4 class="text-4xl text-white font-[anton] mb-3">SAMANTHA PAUL - SMITH</h4>
-                  <p class="text-white font-['roboto']">Mat Pilates / Power Yoga</p>
-                </header>
-                <div class="flex items-center justify-between">
-                  <ul class="flex items-center space-x-4">
-                    <li class="text-[#fe5000] hover:text-white">
-                      <a href="https://www.facebook.com/evernote/">
-                        <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
-                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                          <path
-                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                          </path>
-                        </svg>
-                        <!-- Facebook -->
-                      </a>
-                    </li>
-                    <li class="text-[#fe5000] hover:text-white">
-                      <a href="https://www.instagram.com/evernote">
-                        <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
-                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                          <path
-                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                          </path>
-                        </svg>
-                        <!-- Instagram -->
-                      </a>
-                    </li>
-                    <li class="text-[#fe5000] hover:text-white">
-                      <a href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
-                        <svg class="w-4 h-4 fill-current transition-all duration-300 ease-[ease]"
-                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                          <path
-                            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                          </path>
-                        </svg>
-                        <!-- YouTube -->
-                      </a>
-                    </li>
-                  </ul>
-                  <div>
-                    <a class="text-white hover:text-[#fe5000] font-bold inline-flex items-center" href="">
-                      <span class="font-bold transition-all duration-300 ease-[ease]">FULL PROFILE</span>
-                      <span class="w-3 ml-1 relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                          class="fill-current transition-all duration-300 ease-[ease]">
-                          <path
-                            d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
-                          </path>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
+                <div>
+                  <a class="text-white hover:text-[#fe5000] font-bold inline-flex items-center" href="">
+                    <span class="font-bold transition-all duration-300 ease-[ease]">FULL PROFILE</span>
+                    <span class="w-3 ml-1 relative">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        class="fill-current transition-all duration-300 ease-[ease]">
+                        <path
+                          d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
+                        </path>
+                      </svg>
+                    </span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section x-data='{
+  <section x-data='{
     reviews: [
       { "id": 0, "name": "ROBERTA FLANNAGAN", "position": "Personal workout", "image": "testimonial_07.png", "width": "110", "text": "A mountain of excuses, or a mountain of motivation. Every mountain conquered start with one step, tall the mountain, it cannot block the sun." },
       { "id": 1, "name": "SYLVIA RINSKY", "position": "Recreational climber", "image": "testimonial_08.png", "width": "90", "text": "The choices we make lead up to experiences make actual. It is one thing to decide to climb a mountain. It is quite another to be on top of it." },
@@ -864,219 +858,218 @@
       }, 3000);
     }
 }'>
-      <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
-        <header class="mb-16">
-          <div>
-            <h3 class="text-[#fe5000] text-6xl font-bold font-['Hurricane']"
-              x-intersect="$el.classList.add('fadeInUp')">Our clients’</h3>
-            <h2 class="text-5xl lg:text-6xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">TESTIMONIALS</h2>
+    <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
+      <header class="mb-16">
+        <div>
+          <h3 class="text-[#fe5000] text-6xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">
+            Our clients’</h3>
+          <h2 class="text-5xl lg:text-6xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">TESTIMONIALS</h2>
+        </div>
+      </header>
+      <div class="flex items-center">
+        <div class="flex-1 lg:grid lg:grid-cols-4">
+          <div class="lg:col-span-1 mb-8 lg:mb-0" x-intersect="$el.classList.add('fadeInLeft')">
+            <img :src="`./../assets/images/${reviews[point].image}`" :alt="reviews[point].name">
           </div>
-        </header>
-        <div class="flex items-center">
-          <div class="flex-1 lg:grid lg:grid-cols-4">
-            <div class="lg:col-span-1 mb-8 lg:mb-0" x-intersect="$el.classList.add('fadeInLeft')">
-              <img :src="`./../assets/images/${reviews[point].image}`" :alt="reviews[point].name">
-            </div>
-            <div class="lg:col-span-3 pr-6 lg:pr-16">
-              <div class="py-8 bg-no-repeat bg-right-top lg:bg-[url('./../assets/images/quote_sign_gray.png')]">
-                <div class="flex items-center space-x-2 mb-6" x-intersect="$el.classList.add('scale')">
-                  <span class="text-[#fe5000]">
-                    <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 576 512">
-                      <path
-                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
-                    </svg>
-                  </span>
-                  <span class="text-[#fe5000]">
-                    <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 576 512">
-                      <path
-                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
-                    </svg>
-                  </span>
-                  <span class="text-[#fe5000]">
-                    <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 576 512">
-                      <path
-                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
-                    </svg>
-                  </span>
-                  <span class="text-[#fe5000]">
-                    <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 576 512">
-                      <path
-                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
-                    </svg>
-                  </span>
-                  <span class="text-[#fe5000]">
-                    <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 576 512">
-                      <path
-                        d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
-                    </svg>
-                  </span>
-                </div>
-                <blockquote class="text-3xl lg:text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text"
-                  x-intersect="$el.classList.add('fadeInRight')">
-                </blockquote>
-                <div class="mb-2" x-intersect="$el.classList.add('scale')">
-                  <img src="./../assets/images/signature_04.png" alt="">
-                </div>
-                <div>
-                  <p class="text-lg font-medium" x-text="reviews[point].name"
-                    x-intersect="$el.classList.add('fadeInUp')"></p>
-                  <p class="text-sm text-gray-500" x-text="reviews[point].position"
-                    x-intersect="$el.classList.add('fadeInUp')"></p>
-                </div>
+          <div class="lg:col-span-3 pr-6 lg:pr-16">
+            <div class="py-8 bg-no-repeat bg-right-top lg:bg-[url('./../assets/images/quote_sign_gray.png')]">
+              <div class="flex items-center space-x-2 mb-6" x-intersect="$el.classList.add('scale')">
+                <span class="text-[#fe5000]">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path
+                      d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
+                  </svg>
+                </span>
+                <span class="text-[#fe5000]">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path
+                      d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
+                  </svg>
+                </span>
+                <span class="text-[#fe5000]">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path
+                      d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
+                  </svg>
+                </span>
+                <span class="text-[#fe5000]">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path
+                      d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
+                  </svg>
+                </span>
+                <span class="text-[#fe5000]">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512">
+                    <path
+                      d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z" />
+                  </svg>
+                </span>
+              </div>
+              <blockquote class="text-3xl lg:text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text"
+                x-intersect="$el.classList.add('fadeInRight')">
+              </blockquote>
+              <div class="mb-2" x-intersect="$el.classList.add('scale')">
+                <img src="./../assets/images/signature_04.png" alt="">
+              </div>
+              <div>
+                <p class="text-lg font-medium" x-text="reviews[point].name" x-intersect="$el.classList.add('fadeInUp')">
+                </p>
+                <p class="text-sm text-gray-500" x-text="reviews[point].position"
+                  x-intersect="$el.classList.add('fadeInUp')"></p>
               </div>
             </div>
           </div>
-          <div class="flex-none w-1 h-full bg-black">
-            <ul class="cursor-pointer">
-              <template x-for="review in reviews" :key="review.id">
-                <li x-on:click="point = review.id">
-                  <div class="w-1 h-24 bg-[#fe5000]"
-                    :class="review.id == point ? 'opacity-100' : 'opacity-30 hover:opacity-100'"></div>
-                </li>
-              </template>
-            </ul>
-          </div>
+        </div>
+        <div class="flex-none w-1 h-full bg-black">
+          <ul class="cursor-pointer">
+            <template x-for="review in reviews" :key="review.id">
+              <li x-on:click="point = review.id">
+                <div class="w-1 h-24 bg-[#fe5000]"
+                  :class="review.id == point ? 'opacity-100' : 'opacity-30 hover:opacity-100'"></div>
+              </li>
+            </template>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div>
-        <img class="w-full" src="./../assets/images/blue_bottom_wave_01-1536x176.png" alt="">
-      </div>
-      <div class="bg-[#171c34]">
-        <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
-          <div class="lg:grid lg:grid-cols-3">
-            <div class="lg:col-span-1 mb-8">
-              <div class="mb-8" x-intersect="$el.classList.add('fadeInUp')">
-                <img src="./../assets/images/logo_footer.png" width="165" height="65" alt="">
-              </div>
-              <div class="text-gray-100" x-intersect="$el.classList.add('scale')">
-                <p class="mb-2">©2021 Zele Outdoors</p>
-                <p><a class="text-gray-400 hover:text-[#fe5000]" href="">Disclaimer</a><span
-                    class="text-gray-400 mx-2">|</span><a class="text-gray-500 hover:text-[#fe5000]" href="">Privacy
-                    Policy</a></p>
+  <footer>
+    <div>
+      <img class="w-full" src="./../assets/images/blue_bottom_wave_01-1536x176.png" alt="">
+    </div>
+    <div class="bg-[#171c34]">
+      <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
+        <div class="lg:grid lg:grid-cols-3">
+          <div class="lg:col-span-1 mb-8">
+            <div class="mb-8" x-intersect="$el.classList.add('fadeInUp')">
+              <img src="./../assets/images/logo_footer.png" width="165" height="65" alt="">
+            </div>
+            <div class="text-gray-100" x-intersect="$el.classList.add('scale')">
+              <p class="mb-2">©2021 Zele Outdoors</p>
+              <p><a class="text-gray-400 hover:text-[#fe5000]" href="">Disclaimer</a><span
+                  class="text-gray-400 mx-2">|</span><a class="text-gray-500 hover:text-[#fe5000]" href="">Privacy
+                  Policy</a></p>
+            </div>
+          </div>
+          <div class="lg:col-span-2 lg:grid lg:grid-cols-4 lg:gap-x-4">
+            <div class="mb-8" x-intersect="$el.classList.add('fadeInUp')">
+              <header class="mb-4">
+                <h4 class="text-[#fe5000]">QUICKS LINKS</h4>
+              </header>
+              <div>
+                <ul class="menu">
+                  <li class="mb-1"><a class="text-gray-400 hover:text-gray-200" href="">About</a></li>
+                  <li class="mb-1"><a class="text-gray-400 hover:text-gray-200" href="">Tours</a></li>
+                  <li class="mb-1"><a class="text-gray-400 hover:text-gray-200" href="">Membership</a></li>
+                  <li class="mb-1"><a class="text-gray-400 hover:text-gray-200" href="">Schedules</a></li>
+                  <li class="mb-1"><a class="text-gray-400 hover:text-gray-200" href="">Gallery</a></li>
+                </ul>
               </div>
             </div>
-            <div class="lg:col-span-2 lg:grid lg:grid-cols-4 lg:gap-x-4">
-              <div class="mb-8" x-intersect="$el.classList.add('fadeInUp')">
-                <header class="mb-4">
-                  <h4 class="text-[#fe5000]">QUICKS LINKS</h4>
-                </header>
-                <div>
-                  <ul class="menu">
-                    <li class="mb-1"><a class="text-gray-400 hover:text-gray-200" href="">About</a></li>
-                    <li class="mb-1"><a class="text-gray-400 hover:text-gray-200" href="">Tours</a></li>
-                    <li class="mb-1"><a class="text-gray-400 hover:text-gray-200" href="">Membership</a></li>
-                    <li class="mb-1"><a class="text-gray-400 hover:text-gray-200" href="">Schedules</a></li>
-                    <li class="mb-1"><a class="text-gray-400 hover:text-gray-200" href="">Gallery</a></li>
-                  </ul>
+            <div class="mb-8" x-intersect="$el.classList.add('fadeInUp')">
+              <header class="mb-4">
+                <h4 class="text-[#fe5000]">LOCATION & HOURS</h4>
+              </header>
+              <div class="text-gray-400">
+                <p>Mon – Sat: 6:00 – 12:00</p>
+                <p>Sunday – Closed</p>
+                <div class="pt-6">
+                  <p>234-244 Stockwell Rd</p>
+                  <p>Brixton, SW9 9SP</p>
                 </div>
               </div>
-              <div class="mb-8" x-intersect="$el.classList.add('fadeInUp')">
-                <header class="mb-4">
-                  <h4 class="text-[#fe5000]">LOCATION & HOURS</h4>
-                </header>
-                <div class="text-gray-400">
-                  <p>Mon – Sat: 6:00 – 12:00</p>
-                  <p>Sunday – Closed</p>
-                  <div class="pt-6">
-                    <p>234-244 Stockwell Rd</p>
-                    <p>Brixton, SW9 9SP</p>
-                  </div>
+            </div>
+            <div class="lg:col-span-2 mb-8" x-intersect="$el.classList.add('fadeInUp')">
+              <header class="mb-8">
+                <h4 class="text-[#fe5000]">NEWSLETTER</h4>
+              </header>
+              <div class="lg:flex lg:items-center">
+                <div class="border-b border-solid border-gray-400 pb-2 mb-6">
+                  <input type="email" name="your-email" value="" size="40"
+                    class="w-full text-gray-100 focus:outline-none placeholder-gray-200 bg-transparent"
+                    aria-required="true" aria-invalid="false" placeholder="Your E-mail*">
+                </div>
+                <div class="border-b border-solid border-gray-400 pb-2 mb-6">
+                  <button id="submit" class="flex items-center space-x-4 text-[#fe5000] group">
+                    <span>SUBSCRIBE</span>
+                    <span class="relative">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        class="w-4 h-auto fill-current -rotate-45 group-hover:rotate-0 transition-all duration-300 ease-[ease]">
+                        <path
+                          d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
+                        </path>
+                      </svg>
+                    </span>
+                  </button>
                 </div>
               </div>
-              <div class="lg:col-span-2 mb-8" x-intersect="$el.classList.add('fadeInUp')">
-                <header class="mb-8">
-                  <h4 class="text-[#fe5000]">NEWSLETTER</h4>
-                </header>
-                <div class="lg:flex lg:items-center">
-                  <div class="border-b border-solid border-gray-400 pb-2 mb-6">
-                    <input type="email" name="your-email" value="" size="40"
-                      class="w-full text-gray-100 focus:outline-none placeholder-gray-200 bg-transparent"
-                      aria-required="true" aria-invalid="false" placeholder="Your E-mail*">
-                  </div>
-                  <div class="border-b border-solid border-gray-400 pb-2 mb-6">
-                    <button id="submit" class="flex items-center space-x-4 text-[#fe5000] group">
-                      <span>SUBSCRIBE</span>
-                      <span class="relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                          class="w-4 h-auto fill-current -rotate-45 group-hover:rotate-0 transition-all duration-300 ease-[ease]">
-                          <path
-                            d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
-                          </path>
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="social__link" x-intersect="$el.classList.add('scale')">
-                  <ul class="flex items-center space-x-4">
-                    <li>
-                      <a class="text-gray-100 hover:text-[#fe5000]" href="https://www.facebook.com/evernote/">
-                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                          <path
-                            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                          </path>
-                        </svg>
-                        <!-- Facebook -->
-                      </a>
-                    </li>
-                    <li>
-                      <a class="text-gray-100 hover:text-[#fe5000]" href="https://twitter.com/evernote">
-                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                          <path
-                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                          </path>
-                        </svg>
-                        <!-- Twitter -->
-                      </a>
-                    </li>
-                    <li>
-                      <a class="text-gray-100 hover:text-[#fe5000]" href="https://www.instagram.com/evernote">
-                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                          <path
-                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                          </path>
-                        </svg>
-                        <!-- Instagram -->
-                      </a>
-                    </li>
-                    <li>
-                      <a class="text-gray-100 hover:text-[#fe5000]"
-                        href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
-                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                          <path
-                            d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                          </path>
-                        </svg>
-                        <!-- YouTube -->
-                      </a>
-                    </li>
-                    <li>
-                      <a class="text-gray-100 hover:text-[#fe5000]" href="https://www.linkedin.com/company/evernote">
-                        <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                          <path
-                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-                          </path>
-                        </svg>
-                        <!-- Linkedin -->
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="social__link" x-intersect="$el.classList.add('scale')">
+                <ul class="flex items-center space-x-4">
+                  <li>
+                    <a class="text-gray-100 hover:text-[#fe5000]" href="https://www.facebook.com/evernote/">
+                      <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                        </path>
+                      </svg>
+                      <!-- Facebook -->
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-gray-100 hover:text-[#fe5000]" href="https://twitter.com/evernote">
+                      <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                        </path>
+                      </svg>
+                      <!-- Twitter -->
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-gray-100 hover:text-[#fe5000]" href="https://www.instagram.com/evernote">
+                      <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                        </path>
+                      </svg>
+                      <!-- Instagram -->
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-gray-100 hover:text-[#fe5000]"
+                      href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
+                      <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path
+                          d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                        </path>
+                      </svg>
+                      <!-- YouTube -->
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-gray-100 hover:text-[#fe5000]" href="https://www.linkedin.com/company/evernote">
+                      <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                          d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                        </path>
+                      </svg>
+                      <!-- Linkedin -->
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   <script type="module" src="./../assets/js/main.js"></script>
 </body>
