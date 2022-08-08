@@ -9,7 +9,7 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
-        team: resolve(__dirname, 'src/team/index.html')
+        // team: resolve(__dirname, 'src/team/index.html')
       }
     }
   }

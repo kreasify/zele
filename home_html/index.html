@@ -16,7 +16,21 @@
   <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 
+  <link rel="stylesheet" href="assets/style.css">
+
   <style>
+    @-webkit-keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     @keyframes fadeInUp {
       0% {
         opacity: 0;
@@ -30,7 +44,20 @@
     }
 
     .fadeInUp {
-      animation: fadeInUp 1s;
+      -webkit-animation: fadeInUp 1s;
+              animation: fadeInUp 1s;
+    }
+
+    @-webkit-keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     @keyframes fadeInLeft {
@@ -46,7 +73,20 @@
     }
 
     .fadeInLeft {
-      animation: fadeInLeft 1s;
+      -webkit-animation: fadeInLeft 1s;
+              animation: fadeInLeft 1s;
+    }
+
+    @-webkit-keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     @keyframes fadeInRight {
@@ -62,7 +102,20 @@
     }
 
     .fadeInRight {
-      animation: fadeInRight 1s;
+      -webkit-animation: fadeInRight 1s;
+              animation: fadeInRight 1s;
+    }
+
+    @-webkit-keyframes scale {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     @keyframes scale {
@@ -78,24 +131,25 @@
     }
 
     .scale {
-      animation: scale 1s;
+      -webkit-animation: scale 1s;
+              animation: scale 1s;
     }
 
     @media (prefers-reduced-motion) {
 
       .fadeInUp,
       .scale {
-        animation: none;
+        -webkit-animation: none;
+                animation: none;
       }
     }
   </style>
-
 </head>
 
 <body x-data="{sideNav: false, atTop: true}" :class="{ 'overflow-hidden': sideNav }">
   <!-- navbar top -->
   <div class="bg-[#222222] py-2 hidden lg:block">
-    <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-8 flex items-center justify-between space-x-6">
+    <div class="container max-w-screen-xl mx-auto flex items-center justify-between space-x-6 px-6 lg:px-0">
       <div>
         <a class="inline-flex items-center space-x-2 text-white hover:text-gray-100 text-sm" href="">
           <span class="text-[#f41e1e]">
@@ -167,15 +221,15 @@
     <div class="w-full left-0 top-0 transition-all duration-500 ease-[ease] delay-300"
       :class="atTop ? 'absolute' : 'fixed bg-white delay-300 animate-[fadeInDown_900ms_ease-in-out] shadow-lg z-50'"
       x-on:scroll.window="atTop = (window.pageYOffset > 80) ? false : true;">
-      <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-8 relative z-10">
+      <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-0 relative z-10">
         <div class="nav__wrapper grid grid-cols-12 items-center">
           <div class="nav__brand col-span-11 lg:col-span-3 xl:col-span-2">
             <a class="navbar__logo" href="/" title="Back to home">
               <!-- white logo -->
-              <img class="max-w-full" :class="atTop ? 'block' : 'hidden'" src="/assets/images/logo.png" width="135"
+              <img class="max-w-full" :class="atTop ? 'block' : 'hidden'" src="data:image/png;base64,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" width="135"
                 height="90" alt="logo">
               <!-- black logo -->
-              <img class="max-w-full" :class="atTop ? 'hidden' : 'block'" src="/assets/images/logo_black.png"
+              <img class="max-w-full" :class="atTop ? 'hidden' : 'block'" src="data:image/png;base64,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"
                 width="116" height="55" alt="logo">
             </a>
           </div>
@@ -347,7 +401,7 @@
               :class="sideNav ? 'mr-0' : '-mr-80'">
               <div class="nav__brand-mobile lg:hidden px-6 mb-6">
                 <a class="nav__brand-link" href="/" title="Back to home">
-                  <img class="object-cover mx-auto" src="/assets/images/logo.png" width="135" height="90" alt="logo">
+                  <img class="object-cover mx-auto" src="data:image/png;base64,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" width="135" height="90" alt="logo">
                 </a>
               </div>
               <ul class="menu lg:flex lg:space-x-8 list-none pl-6 lg:pl-0 mr-8">
@@ -439,7 +493,7 @@
             x-transition:enter-end="opacity-100" x-transition:leave="transition ease-[ease] duration-100"
             x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
             <img class="object-cover w-full h-full transition-all duration-200 ease-[ease]"
-              :src="`/assets/images/${reviews[0].image}`" :alt="reviews[0].title">
+              :src="`assets/${reviews[0].image}`" :alt="reviews[0].title">
           </div>
           <!-- image 2 -->
           <div x-show="reviews[point].id == 1" class="hero__image absolute top-0 left-0 w-full h-full"
@@ -447,7 +501,7 @@
             x-transition:enter-end="opacity-100" x-transition:leave="transition ease-[ease] duration-100"
             x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
             <img class="object-cover w-full h-full transition-all duration-200 ease-[ease]"
-              :src="`/assets/images/${reviews[1].image}`" :alt="reviews[1].title">
+              :src="`assets/${reviews[1].image}`" :alt="reviews[1].title">
           </div>
           <!-- image 3 -->
           <div x-show="reviews[point].id == 2" class="hero__image absolute top-0 left-0 w-full h-full"
@@ -455,7 +509,7 @@
             x-transition:enter-end="opacity-100" x-transition:leave="transition ease-[ease] duration-100"
             x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
             <img class="object-cover w-full h-full transition-all duration-200 ease-[ease]"
-              :src="`/assets/images/${reviews[2].image}`" :alt="reviews[2].title">
+              :src="`assets/${reviews[2].image}`" :alt="reviews[2].title">
           </div>
           <div class="absolute w-full h-full top-0 left-0">
             <div class="container w-full max-w-screen-xl mx-auto h-full">
@@ -617,21 +671,21 @@
               x-transition:enter-start="opacity-0 -translate-x-full" x-transition:enter-end="opacity-100 translate-x-0"
               x-transition:leave="transition ease-[ease] duration-100"
               x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 -translate-x-full"
-              class="absolute left-0 top-0 bottom-0 w-1/3 bg-cover bg-left bg-no-repeat bg-[url('./../images/floating_image_03_01.png')]">
+              class="absolute left-0 top-0 bottom-0 w-1/3 bg-cover bg-left bg-no-repeat bg-[url('assets/floating_image_03_01.png')]">
             </div>
             <!-- bg image left -->
             <div x-show="reviews[point].id == 1" x-transition:enter="transition ease-[ease] duration-300 delay-500"
               x-transition:enter-start="opacity-0 -translate-x-full" x-transition:enter-end="opacity-100 translate-x-0"
               x-transition:leave="transition ease-[ease] duration-100"
               x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 -translate-x-full"
-              class="absolute left-0 top-0 bottom-0 w-1/3 bg-cover bg-left bg-no-repeat bg-[url('./../images/floating_image_03_01.png')]">
+              class="absolute left-0 top-0 bottom-0 w-1/3 bg-cover bg-left bg-no-repeat bg-[url('assets/floating_image_03_01.png')]">
             </div>
             <!-- bg image left -->
             <div x-show="reviews[point].id == 2" x-transition:enter="transition ease-[ease] duration-300 delay-500"
               x-transition:enter-start="opacity-0 -translate-x-full" x-transition:enter-end="opacity-100 translate-x-0"
               x-transition:leave="transition ease-[ease] duration-100"
               x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 -translate-x-full"
-              class="absolute left-0 top-0 bottom-0 w-1/3 bg-cover bg-left bg-no-repeat bg-[url('./../images/floating_image_03_01.png')]">
+              class="absolute left-0 top-0 bottom-0 w-1/3 bg-cover bg-left bg-no-repeat bg-[url('assets/floating_image_03_01.png')]">
             </div>
 
             <!-- bg image right -->
@@ -639,33 +693,33 @@
               x-transition:enter-start="opacity-0 translate-x-full" x-transition:enter-end="opacity-100 translate-x-0"
               x-transition:leave="transition ease-[ease] duration-100"
               x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-x-full"
-              class="absolute right-0 top-0 bottom-0 w-1/3 bg-cover bg-right bg-no-repeat bg-[url('./../images/floating_image_03_02.png')]">
+              class="absolute right-0 top-0 bottom-0 w-1/3 bg-cover bg-right bg-no-repeat bg-[url('assets/floating_image_03_02.png')]">
             </div>
             <!-- bg image right -->
             <div x-show="reviews[point].id == 1" x-transition:enter="transition ease-[ease] duration-300 delay-500"
               x-transition:enter-start="opacity-0 translate-x-full" x-transition:enter-end="opacity-100 translate-x-0"
               x-transition:leave="transition ease-[ease] duration-100"
               x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-x-full"
-              class="absolute right-0 top-0 bottom-0 w-1/3 bg-cover bg-right bg-no-repeat bg-[url('./../images/floating_image_03_02.png')]">
+              class="absolute right-0 top-0 bottom-0 w-1/3 bg-cover bg-right bg-no-repeat bg-[url('assets/floating_image_03_02.png')]">
             </div>
             <!-- bg image right -->
             <div x-show="reviews[point].id == 2" x-transition:enter="transition ease-[ease] duration-300 delay-500"
               x-transition:enter-start="opacity-0 translate-x-full" x-transition:enter-end="opacity-100 translate-x-0"
               x-transition:leave="transition ease-[ease] duration-100"
               x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-x-full"
-              class="absolute right-0 top-0 bottom-0 w-1/3 bg-cover bg-right bg-no-repeat bg-[url('./../images/floating_image_03_02.png')]">
+              class="absolute right-0 top-0 bottom-0 w-1/3 bg-cover bg-right bg-no-repeat bg-[url('assets/floating_image_03_02.png')]">
             </div>
           </div>
         </div>
         <div
-          class="absolute left-0 bottom-0 w-full bg-contain bg-bottom bg-no-repeat aspect-[21/4] bg-[url('./../images/white_bottom_wave_01.png')]">
+          class="absolute left-0 bottom-0 w-full bg-contain bg-bottom bg-no-repeat aspect-[21/4] bg-[url('assets/white_bottom_wave_01.png')]">
         </div>
       </div>
     </section>
 
     <!-- build your best body section -->
-    <section class="bg-fixed bg-cover bg-left bg-no-repeat bg-[url('/assets/images/background_03_01.jpg')]">
-      <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-8 py-16">
+    <section class="bg-fixed bg-cover bg-left bg-no-repeat bg-[url('assets/background_03_01.jpg')]">
+      <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
         <header class="lg:flex lg:justify-between lg:items-center">
           <div class="mb-10 lg:mb-0">
             <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']"
@@ -692,7 +746,7 @@
             <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
               <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
                 <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                  src="/assets/images/card_image_07.jpg" alt="">
+                  src="assets/card_image_07.69155b53.jpg" alt="">
               </div>
               <div class="absolute left-0 bottom-6 w-full px-6 overflow-hidden">
                 <div>
@@ -715,7 +769,7 @@
             <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
               <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
                 <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                  src="/assets/images/card_image_10.jpg" alt="">
+                  src="assets/card_image_10.691ea5a8.jpg" alt="">
               </div>
               <div class="absolute left-0 bottom-6 w-full px-6 overflow-hidden">
                 <div>
@@ -740,7 +794,7 @@
             <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
               <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
                 <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                  src="/assets/images/card_image_08.jpg" alt="">
+                  src="assets/card_image_08.450d604f.jpg" alt="">
               </div>
               <div class="absolute left-0 bottom-6 w-full px-6 overflow-hidden">
                 <div>
@@ -763,7 +817,7 @@
             <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
               <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
                 <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                  src="/assets/images/card_image_11.jpg" alt="">
+                  src="assets/card_image_11.9278d5c5.jpg" alt="">
               </div>
               <div class="absolute left-0 bottom-6 w-full px-6 overflow-hidden">
                 <div>
@@ -788,7 +842,7 @@
             <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
               <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
                 <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                  src="/assets/images/card_image_09.jpg" alt="">
+                  src="assets/card_image_09.1fc8298f.jpg" alt="">
               </div>
               <div class="absolute left-0 bottom-6 w-full px-6 overflow-hidden">
                 <div>
@@ -811,7 +865,7 @@
             <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
               <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
                 <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                  src="/assets/images/card_image_12.jpg" alt="">
+                  src="assets/card_image_12.36d33c4c.jpg" alt="">
               </div>
               <div class="absolute left-0 bottom-6 w-full px-6 overflow-hidden">
                 <div>
@@ -837,9 +891,9 @@
     </section>
 
     <!-- how you can become stronger section -->
-    <section class="bg-fixed bg-cover bg-right bg-no-repeat bg-[url('/assets/images/background_03_02.jpg')]">
-      <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-8 pt-8 pb-16 lg:pb-24">
-        <header class="text-center py-20 mb-4 bg-contain bg-top bg-no-repeat bg-[url('/assets/images/sign_gray.png')]">
+    <section class="bg-fixed bg-cover bg-right bg-no-repeat bg-[url('assets/background_03_02.jpg')]">
+      <div class="container w-full max-w-screen-xl mx-auto pt-8 pb-16 lg:pb-24 px-6 lg:px-0">
+        <header class="text-center py-20 mb-4 bg-contain bg-top bg-no-repeat bg-[url('assets/sign_gray.png')]">
           <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']"
             x-intersect="$el.classList.add('fadeInUp')">How you can</h3>
           <h2 class="text-5xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">#BECOMESTRONGER</h2>
@@ -974,9 +1028,9 @@
     </section>
 
     <!-- your first class free section -->
-    <section class="bg-[#f41e1e] bg-contain bg-bottom bg-no-repeat bg-[url('/assets/images/black_bottom_wave_02.png')]">
-      <div class="bg-contain bg-top bg-no-repeat bg-[url('/assets/images/white_top_wave_03.png')]">
-        <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-8 py-8 lg:pr-20">
+    <section class="bg-[#f41e1e] bg-contain bg-bottom bg-no-repeat bg-[url('assets/black_bottom_wave_02.png')]">
+      <div class="bg-contain bg-top bg-no-repeat bg-[url('assets/white_top_wave_03.png')]">
+        <div class="container w-full max-w-screen-xl mx-auto py-8 pl-6 pr-6 lg:pl-0 lg:pr-20">
           <div class="lg:grid lg:grid-cols-3 lg:items-center lg:gap-x-10">
             <div class="lg:col-span-2">
               <div class="lg:grid lg:grid-cols-3 lg:items-center py-8">
@@ -1009,11 +1063,11 @@
             </div>
             <div class="relative mb-8 lg:mb-0 lg:order-first">
               <div>
-                <img class="max-w-full" src="/assets/images/hero_image_05.png" alt=""
+                <img class="max-w-full" src="assets/hero_image_05.502af9d7.png" alt=""
                   x-intersect="$el.classList.add('scale')">
               </div>
               <div class="absolute left-0 bottom-0 z-10">
-                <img class="max-w-full" src="/assets/images/floating_image_05.png" alt="">
+                <img class="max-w-full" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqgAAAEsBAMAAAD9X1w8AAAAIVBMVEUAAAD////////////////////////////////////////PIev5AAAAC3RSTlMAZhdODQVdRlUgPCYtZTkAAAc1SURBVHja7J3BcRQxEEX7H3zgpp8CN9IgBhIgBnIgFdKkPC5jdldae2Y1Vn/pvyNUuey3krrVLWljDp7CdKeEMcYYMxyGsVRjjDETQm85+0PH+O6Attod2Gl/QC+qr7g2+iBP37+F6YwnaERKqYhF+fG1adVSj/Dn1++fZFOqq3gHADdUd5I558EmtekO2aUmZbPq2khnyIeVkHT21RlYapwi1SUntZG65CQAy5mxCktOArA4+zoDOFIZMzNLBow6Kl2liddksuyS6rMVH4Akj0iFk9EmIJvqwOL19njBacEZWqGzVKk6e35epHpE9gSsD9XJm0qXWGomyKhyW29WkvolRoKWOO0iPmMg7Twe0lLHsoV4S+1LOxrtilM+g3Gtjs2KirsAhzh3jld/+AI1wsvxaKn5+3TVT8wd60mHklmSRafh4xT47kpvQKL4bmlvqYX7pLq5aqkjAEl6TT1BKv0IQle4kbMkLIt2HyAp1env/cMJdVeZystoStQhlWuEYyG5t5jtx2mOdazaUiWqumMBn9kRSbxv+qhU+pmjE6QuNpSaaFzYnXjlbMOaVMf43LvRyUdq489rHEqFpT4qtax1QLfrNG9HKp8z63zzhC6O9r145nMpiYuj96XOeuS1LlVjG59VqnRvJGlW5tejToB+52wj4ez3hqCSpc4aMHaRLEv1AlKRmvxtGr3F5eM+WPZKneJu6amQdL25MyDp7zvqDJ9ZcYZekTD3MrdSnY+eILU6zX3U710K93asJY76lRgJ7kktqlIxWiqbUqsPd0t0rBFDwb3e6uU4FpI6FpLtoeqEtL9UFEvtLDWIiACUA8YY3m9Yc8ZOXQuNUwBrrh7e4v9D5WjFosBST4B6HSEBMO1pHG3cXH1D5N7JmlKjItW5rnj1Uhmbe0WlVL8k3s5eIvEdFTdMteiTE0olYyCbuemkYqhUvKibUOrA3xxtdSSL7N5mqFRulOnKJkOn/32putt4pJXaAaz4FXfwq35vqNyxrEqdJsVvAOmnEpMWJypShcZSzoEaIP2d6L3BZtXqDnH32f7kkzwraJtj9hCflopUmbwpLzdSdfKmvPg15FdkUptFnZqcLDvJr3CMz47y3dK06QmpG+zSJn3CpdG8X/YoHKgGSt1GC6d8/HegVLJgzhtBA2cZGbNKjWGA1U6ASjjKCciKVJ0MYihkAUv136ksFTGMdrOfjNp/yexsxp/043yvgo+EL/iSdUdwV6rwSd9xvEktHqmfJzVI4Sg8CvCdM+klc4hP+pHh/kg964XGGc5IHzyUCiavN2eFzxTvzvviCB9hqQqgSNd958Ud6wskqnhrNleFS6N5pQqvqTulWlyCWZb6I/2fmQaLi6sRalJzFpyuUZO65JOBqEvVaH+OlEpGGwj3lPf+dFdXcgP3T0NP6qw7iANSVe7F5uRve2dwHTcMA1HgkjOmhxTgJtJPekjjeU928mwv5dVaWmGGmn/dy+qLBEmAIhOA8perlBOnsVSduS6ilYohuLncS0lq9koF1lyjBqPJBfLsT41twG0yTKUy0gvWvdXcremJAADnkk6XBIBr9tH7vHxXqvZilDPzoi01SdfRV1yCbzYjmV6kJlFTrZE5sNQFoYjtELIFMakZ79H677TcPrZMsow3+lbcolJtv2b943tSnQBlbirAlJcAt0udsameQAI1YaUuKxpJADNK7d7OC2wO6TLlz9bIhYViHCd1d/NjoQi7kK7UxCtFtaKij9h3gPRlk6SMpc4ytdmImNQU/nJ1C7X5wC+dAaNdKmaUiugFqE1SlR67v6XigXmqfqL7HAAfPxcnSU1LfYLUBCAf27r+OypWrBZ3+XMYl0nmJ7pLUeKK9eTj8J4130UD33/YpHJ3w0eZpGKtXAhgrliHCaZxkjpVP+CksF3KCaf+Pr4iT/jL8uwvWRXh21ZdR1fMerfXWfjGlJNI3+2zg7XrJgAon4bcy7q7wQ86Awb6x/iMEdpS+6zijem2TyeijcQr0+VNkmCrH98/Ewb/cH3gnJia6rGtC4y2+unEtoxPUIx1X0ntr/qKSk1IX4qMGNG+fliXevnFKEB7qqcum7q/r+99VOrLHqvcse0hSCJ2AuQpIcVVSLLn2ebsB48P8SQDhl/ZRrRembmP3ykNebmtfieQl7vc7xywItUV6x2Bs2b8YLeiEaBmnNCBVaq55IHqnPgeughLVWAslaJEQc/qlBO3UpXGwYxGEth+OIVQS0U0goWNPwjNFwmkVnwmvX36KVLLO/12SYUzpqdJzdKObV3glbENsJ+jQvrKVqUuFHndhVrqO3lKj80a+P01X4SlSuBk1Ad4DpZhjW3KuGL9gTlOxpoTJwne0JmNGmPu4vyxHp6M7iLLe1KP9pkRZalHS0W6pR4JFqmMexBlSWDu/TgdJMrd/GiyfL/H4SR8AOXxWOpTAPDjz+8wh/LzVxhjjDFmYv4ChLyB7gidVu0AAAAASUVORK5CYII=" alt="">
               </div>
             </div>
           </div>
@@ -1023,8 +1077,8 @@
 
     <!-- weekly schedule section -->
     <section
-      class="bg-[#222222] bg-fixed bg-cover bg-center bg-no-repeat bg-[url('/assets/images/background_03_03.jpg')]">
-      <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-8 py-16">
+      class="bg-[#222222] bg-fixed bg-cover bg-center bg-no-repeat bg-[url('assets/background_03_03.jpg')]">
+      <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
         <header class="lg:flex lg:items-end lg:justify-between mb-16">
           <div class="mb-10 lg:mb-0">
             <h3 class="text-[#f41e1e] text-7xl lg:text-8xl font-bold font-['Hurricane']"
@@ -1176,16 +1230,16 @@
         </div>
       </div>
       <div>
-        <img class="w-full" src="/assets/images/white_bottom_wave_03.png" alt="">
+        <img class="w-full" src="assets/white_bottom_wave_03.c696e1f7.png" alt="">
       </div>
     </section>
 
     <!-- hit hit section -->
     <section>
-      <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+      <div class="container w-full max-w-screen-xl mx-auto py-16 lg:py-24 px-6 lg:px-0">
         <div class="lg:grid lg:grid-cols-2 lg:gap-x-16 mb-10">
           <div class="mb-12 lg:mb-0" x-intersect="$el.classList.add('fadeInLeft')">
-            <img src="/assets/images/hero_image_06.png" alt="">
+            <img src="assets/hero_image_06.2e377c4a.png" alt="">
           </div>
           <div class="flex items-center">
             <div>
@@ -1244,7 +1298,7 @@
         </div>
         <div class="lg:grid lg:grid-cols-2 lg:gap-x-16">
           <div class="mb-12 lg:mb-0 lg:order-last" x-intersect="$el.classList.add('fadeInRight')">
-            <img src="/assets/images/hero_image_07.png" alt="">
+            <img src="assets/hero_image_07.4893375a.png" alt="">
           </div>
           <div class="flex items-center">
             <div>
@@ -1302,14 +1356,14 @@
         </div>
       </div>
       <div class="translate-y-[2px]">
-        <img class="w-full" src="/assets/images/black_bottom_wave_02.png" alt="">
+        <img class="w-full" src="assets/black_bottom_wave_02.d53bf3c9.png" alt="">
       </div>
     </section>
 
     <!-- fitness coaches section -->
     <section
-      class="bg-[#222222] bg-fixed bg-cover bg-center bg-no-repeat bg-[url('/assets/images/background_03_04.jpg')]">
-      <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-8 py-16">
+      class="bg-[#222222] bg-fixed bg-cover bg-center bg-no-repeat bg-[url('assets/background_03_04.jpg')]">
+      <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
         <header class="lg:flex lg:items-end lg:justify-between mb-16">
           <div class="mb-10 lg:mb-0">
             <h3 class="text-[#f41e1e] text-7xl lg:text-8xl font-bold font-['Hurricane']"
@@ -1343,7 +1397,7 @@
             </div>
             <div class="overflow-hidden">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                src="/assets/images/team_04.jpg" alt="">
+                src="assets/team_04.bccdd658.jpg" alt="">
             </div>
             <div class="absolute left-0 bottom-6 w-full px-6 overflow-hidden">
               <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
@@ -1414,7 +1468,7 @@
             </div>
             <div class="overflow-hidden">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                src="/assets/images/team_05.jpg" alt="">
+                src="assets/team_05.e28c808d.jpg" alt="">
             </div>
             <div class="absolute left-0 bottom-6 w-full px-6 overflow-hidden">
               <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
@@ -1485,7 +1539,7 @@
             </div>
             <div class="overflow-hidden">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
-                src="/assets/images/team_06.jpg" alt="">
+                src="assets/team_06.c7f731e8.jpg" alt="">
             </div>
             <div class="absolute left-0 bottom-6 w-full px-6 overflow-hidden">
               <div class="translate-y-12 group-hover:translate-y-0 transition-all duration-500 ease-[ease]">
@@ -1549,7 +1603,7 @@
         </div>
       </div>
       <div class="translate-y-1">
-        <img class="w-full" src="/assets/images/white_bottom_wave_03.png" alt="">
+        <img class="w-full" src="assets/white_bottom_wave_03.c696e1f7.png" alt="">
       </div>
     </section>
 
@@ -1571,7 +1625,7 @@
       }, 3000);
     }
 }'>
-      <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-8 py-16">
+      <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
         <header class="mb-16">
           <div>
             <h3 class="text-[#f41e1e] text-6xl font-bold font-['Hurricane']"
@@ -1583,10 +1637,10 @@
         <div class="flex items-center">
           <div class="flex-1 lg:grid lg:grid-cols-4">
             <div class="lg:col-span-1 mb-8 lg:mb-0" x-intersect="$el.classList.add('fadeInLeft')">
-              <img :src="`/assets/images/${reviews[point].image}`" :alt="reviews[point].name">
+              <img :src="`assets/${reviews[point].image}`" :alt="reviews[point].name">
             </div>
             <div class="lg:col-span-3 pr-6 lg:pr-16">
-              <div class="py-8 bg-no-repeat bg-right-top lg:bg-[url('/assets/images/quote_sign_gray.png')]">
+              <div class="py-8 bg-no-repeat bg-right-top lg:bg-[url('assets/quote_sign_gray.png')]">
                 <div class="flex items-center space-x-2 mb-6" x-intersect="$el.classList.add('scale')">
                   <span class="text-[#f41e1e]">
                     <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
@@ -1628,7 +1682,7 @@
                   x-intersect="$el.classList.add('fadeInUp')">
                 </blockquote>
                 <div class="mb-2" x-intersect="$el.classList.add('scale')">
-                  <img src="/assets/images/signature_04.png" alt="">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABBCAMAAABhCV84AAAAolBMVEUAAAD/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAH/UAF/AQdeAAAANXRSTlMA7vvOVhEK8va0jEyuDcmkKOMd1JVGOyNjQBfanzUv6gZ8dmgD5r66qJBxUSzBht+ZgVxsxJp6owIAAAR1SURBVGje7dfXGppAEAXgoXeQXgUBC/Z63v/V4sYkX0wiphIv/C/9LOPs7FmW3t7e3t7+lhbzmF6YsQeO9LoyTXGh0+uqURTY0X8wWQljeirK5/WeT+g/MNR9RE/pEFvYGxremIMzoWdCzsx06FManGfCluipAmKZ/5cVPvPump5K1IO8+i8xaHA/Ex0TDWs6YDf8Cm8E2GKwODzZxis+kKP/scKyDkAB4Pf+tidUKTX8wqOhnThAayPjgm1/xOxkOvyHc06cwU69KUkmtL4gct2IorwyaGDNDMLmFoWc2BsxjUw1HIsGJS05zE63EYNt9fRZEUZkmTjToEpNBZYyEVtgruesmy5wnpDIXascUrkF8HFbSh2qsC9iWAMpwHHIEGT18fBZ+o3mmPVN/0hAO6FNnkc0oNJWKnAs+yIbfko9Ap41sGbTMJyxrQgcAovolMPsPUXSGWugNFeGzBjLhLPF1qP4oPJ1TD2mGtigJmoh0WCkAEudEzxKbFyeNKZWwd6h8QM2cKqjaPPqFDlQjk+iI5rBkdgjj5nRYBo44y1yh8PBeNbrBWYlEXUQaTCJYpYBD3DF8x/VeaxkonGlDdfAtaIGDg9hKdJTKx4aOwKd2wSOzuFfyepJ35luuOAAJRjRcyLPdjpRyX3cwusFTPkPt+cmTVZHx6zlxw9OYLjGCMusvx2jlQJ21LAGpkRxXeH3L3VSnIpto5s+645/eVhgaaNbqGAUwVw27SncSHTHsuIyMsTTeQ7M04+VsgaONQB2+cuJwSpLrpXZFaDuL2axa8P4YaRmc3TUqv4yKLStz+GKF5w6CbMv/3SlLzXBBeM7Ht0aGFEqAHDDR8H/gznzylBMVsvuVpmtOfrK2FhPA/oiebYi3sbBSI6BownsC7o2vH02xNXMv8yd4hgR3RoYWGEFl+da+hHPSPRWTGNLvvKu7Q/Xp6RearkKYC8snGVjjH5udnfwYyqg3/2POK2LOQc+WJdZ2h4EAep5k331hQ6XiorSdHBPm3FqrMWrtZFuvIksW6PwZILhNJ0xPy+MKyy6oBFZz37aCW5EJ97O6DtGYLMlnQF1CT692ytcsVOVhlr12tm9ik9UwTzudvoWgKuZmq8AjLL355oTrMSR9esBCCRUcvnox8vfbCvWCDEFf3e57NBxSjOlbGe73CwX7IWmaQv7c0X7bbFmu6/Vg8NyeV5vPPpNowqHiZcr4ePYswHdczG/+5irgt05r7JwbWyyW/+lUbI7FMWhjib0d0gXXCZyh+PjcY0rvss6zGL6ismDH+RBYYe9RSvMJXrECmCnHarzXdEuoA3xJDjm+ZAidR8/jtQQXJBj1tA3DcyHuMxNfJhTz+27XMZzKCry5P7FGdwRDUAEZ1kaVj0TbQBQt+Nvb8RcSAOYuKjpCKcvz8O88nd0z3OVRqYBiFCkCHl/dlpr+lbm1EPUxxp4jNUqo1e15vmRr47pZQnwTZwn9LIELKDJ9LoEYP/K9ZEA9XU3CGPzL7xBmOWU3t7e3v6dD9OlgqWFEyDxAAAAAElFTkSuQmCC" alt="">
                 </div>
                 <div x-intersect="$el.classList.add('fadeInUp')">
                   <p class="text-lg font-medium" x-text="reviews[point].name"></p>
@@ -1654,7 +1708,7 @@
     <!-- contact us section -->
     <section>
       <div class="relative">
-        <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-8 py-16">
+        <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
           <div class="lg:grid lg:grid-cols-2 lg:items-center">
             <div class="grid__item mb-6">
               <header class="mb-16">
@@ -1793,17 +1847,17 @@
         </div>
       </div>
       <div class="translate-y-[2px]">
-        <img class="w-full" src="/assets/images/black_bottom_wave_02.png" alt="">
+        <img class="w-full" src="assets/black_bottom_wave_02.d53bf3c9.png" alt="">
       </div>
     </section>
 
     <footer>
       <div class="bg-[#222222]">
-        <div class="container w-full max-w-screen-xl mx-auto px-6 lg:px-8 py-16">
+        <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
           <div class="lg:grid lg:grid-cols-3">
             <div class="lg:col-span-1 mb-8">
               <div class="mb-8" x-intersect="$el.classList.add('scale')">
-                <img src="/assets/images/logo_footer_03.png" width="175" height="180" alt="">
+                <img src="assets/logo_footer_03.71bfeec9.png" width="175" height="180" alt="">
               </div>
             </div>
             <div class="lg:col-span-2 lg:grid lg:grid-cols-4 lg:gap-x-4">
@@ -1921,7 +1975,7 @@
     </footer>
   </div>
 
-  <script type="module" src="/assets/js/main.js"></script>
+  
 </body>
 
 </html>
