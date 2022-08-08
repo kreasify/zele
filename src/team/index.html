@@ -645,7 +645,7 @@
           </div>
         </header>
         <div class="lg:grid lg:grid-cols-3 lg:gap-x-6">
-          <div class="relative group mb-6">
+          <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
             <div class="overflow-hidden">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
                 src="./../assets/images/team_04.jpg" alt="">
@@ -709,7 +709,7 @@
               </div>
             </div>
           </div>
-          <div class="relative group mb-6">
+          <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
             <div class="overflow-hidden">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
                 src="./../assets/images/team_05.jpg" alt="">
@@ -773,7 +773,7 @@
               </div>
             </div>
           </div>
-          <div class="relative group mb-6">
+          <div class="relative group mb-6" x-intersect="$el.classList.add('scale')">
             <div class="overflow-hidden">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
                 src="./../assets/images/team_06.jpg" alt="">
@@ -861,18 +861,18 @@
       <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
         <header class="mb-16">
           <div>
-            <h3 class="text-[#fe5000] text-6xl font-bold font-['Hurricane']">Our clients’</h3>
-            <h2 class="text-5xl lg:text-6xl font-[anton]">TESTIMONIALS</h2>
+            <h3 class="text-[#fe5000] text-6xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Our clients’</h3>
+            <h2 class="text-5xl lg:text-6xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">TESTIMONIALS</h2>
           </div>
         </header>
         <div class="flex items-center">
           <div class="flex-1 lg:grid lg:grid-cols-4">
-            <div class="lg:col-span-1 mb-8 lg:mb-0">
+            <div class="lg:col-span-1 mb-8 lg:mb-0" x-intersect="$el.classList.add('fadeInLeft')">
               <img :src="`./../assets/images/${reviews[point].image}`" :alt="reviews[point].name">
             </div>
             <div class="lg:col-span-3 pr-6 lg:pr-16">
               <div class="py-8 bg-no-repeat bg-right-top lg:bg-[url('./../assets/images/quote_sign_gray.png')]">
-                <div class="flex items-center space-x-2 mb-6">
+                <div class="flex items-center space-x-2 mb-6" x-intersect="$el.classList.add('scale')">
                   <span class="text-[#fe5000]">
                     <svg class="w-4 lg:w-6 h-4 lg:h-6 fill-current" xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 576 512">
@@ -909,14 +909,14 @@
                     </svg>
                   </span>
                 </div>
-                <blockquote class="text-3xl lg:text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text">
+                <blockquote class="text-3xl lg:text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text" x-intersect="$el.classList.add('fadeInRight')">
                 </blockquote>
-                <div class="mb-2">
+                <div class="mb-2" x-intersect="$el.classList.add('scale')">
                   <img src="./../assets/images/signature_04.png" alt="">
                 </div>
                 <div>
-                  <p class="text-lg font-medium" x-text="reviews[point].name"></p>
-                  <p class="text-sm text-gray-500" x-text="reviews[point].position"></p>
+                  <p class="text-lg font-medium" x-text="reviews[point].name" x-intersect="$el.classList.add('fadeInUp')"></p>
+                  <p class="text-sm text-gray-500" x-text="reviews[point].position" x-intersect="$el.classList.add('fadeInUp')"></p>
                 </div>
               </div>
             </div>
@@ -943,10 +943,10 @@
         <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
           <div class="lg:grid lg:grid-cols-3">
             <div class="lg:col-span-1 mb-8">
-              <div class="mb-8">
+              <div class="mb-8" x-intersect="$el.classList.add('fadeInUp')">
                 <img src="./../assets/images/logo_footer.png" width="165" height="65" alt="">
               </div>
-              <div class="text-gray-100">
+              <div class="text-gray-100" x-intersect="$el.classList.add('scale')">
                 <p class="mb-2">©2021 Zele Outdoors</p>
                 <p><a class="text-gray-400 hover:text-[#fe5000]" href="">Disclaimer</a><span
                     class="text-gray-400 mx-2">|</span><a class="text-gray-500 hover:text-[#fe5000]" href="">Privacy
@@ -954,7 +954,7 @@
               </div>
             </div>
             <div class="lg:col-span-2 lg:grid lg:grid-cols-4 lg:gap-x-4">
-              <div class="mb-8">
+              <div class="mb-8" x-intersect="$el.classList.add('fadeInUp')">
                 <header class="mb-4">
                   <h4 class="text-[#fe5000]">QUICKS LINKS</h4>
                 </header>
@@ -968,7 +968,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="mb-8">
+              <div class="mb-8" x-intersect="$el.classList.add('fadeInUp')">
                 <header class="mb-4">
                   <h4 class="text-[#fe5000]">LOCATION & HOURS</h4>
                 </header>
@@ -981,7 +981,7 @@
                   </div>
                 </div>
               </div>
-              <div class="lg:col-span-2 mb-8">
+              <div class="lg:col-span-2 mb-8" x-intersect="$el.classList.add('fadeInUp')">
                 <header class="mb-8">
                   <h4 class="text-[#fe5000]">NEWSLETTER</h4>
                 </header>
@@ -1005,7 +1005,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="social__link">
+                <div class="social__link" x-intersect="$el.classList.add('scale')">
                   <ul class="flex items-center space-x-4">
                     <li>
                       <a class="text-gray-100 hover:text-[#fe5000]" href="https://www.facebook.com/evernote/">
