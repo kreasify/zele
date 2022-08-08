@@ -348,9 +348,9 @@
 
   <section x-data='{
     reviews: [
-      { "id": 0, "title": "Skill", "subtitle": "Endurance", "headline": "DISCIPLINE", "url": "start-today", "name": "ROBERTA FLANNAGAN", "position": "Personal workout", "image": "hero_slider_03_01.jpg", "width": "110", "text": "A mountain of excuses, or a mountain of motivation. Every mountain conquered start with one step, tall the mountain, it cannot block the sun." },
-      { "id": 1, "title": "Polar", "subtitle": "Now To Use", "headline": "STRENGTH", "url": "start-today", "name": "SYLVIA RINSKY", "position": "Recreational climber", "image": "hero_slider_03_02.jpg", "width": "90", "text": "The choices we make lead up to experiences make actual. It is one thing to decide to climb a mountain. It is quite another to be on top of it." },
-      { "id": 2, "title": "Club", "subtitle": "The Ultimate", "headline": "TRAINING", "url": "start-today", "name": "ROBERT MULLINGAN", "position": "Recreational climber", "image": "hero_slider_03_03.jpg", "width": "150", "text": "A mountain of excuses, or a mountain of motivation. Every mountain conquered start with one step, tall the mountain, it cannot block the sun." }
+      { "id": 0, "title": "Skill", "subtitle": "Endurance", "headline": "DISCIPLINE", "url": "start-today", "image": "hero_slider_03_01.jpg" },
+      { "id": 1, "title": "Polar", "subtitle": "Now To Use", "headline": "STRENGTH", "url": "start-today", "image": "hero_slider_03_02.jpg" },
+      { "id": 2, "title": "Club", "subtitle": "The Ultimate", "headline": "TRAINING", "url": "start-today", "image": "hero_slider_03_03.jpg" }
     ],
     point: 0,
     init() {
@@ -360,35 +360,87 @@
         }else{
           this.point = 0;
         }
-      }, 3000);
+      }, 4000);
     }
 }'>
     <div class="aspect-square lg:aspect-[16/9] relative overflow-hidden">
-      <div class="hero__image">
-        <img class="object-cover transition-all duration-200 ease-[ease]" :src="`/assets/images/${reviews[point].image}`" :alt="reviews[point].name">
-      </div>
-      <div class="absolute w-full h-full top-0 left-0">
-        <div class="container w-full max-w-screen-xl mx-auto h-full">
-          <div class="w-1/2 h-full flex items-center justify-center">
-            <div class="mb-8">
-              <h3 class="text-white text-8xl font-bold font-['Hurricane'] -rotate-[5deg]" x-intersect="$el.classList.add('fadeInUp')" x-text="reviews[point].title"></h3>
-              <h3 class="text-[#f41e1e] text-8xl font-bold font-['Hurricane'] -rotate-[5deg]" x-intersect="$el.classList.add('fadeInUp')" x-text="reviews[point].subtitle"></h3>
-              <h2 class="text-white text-7xl lg:text-8xl font-[anton] -rotate-[5deg]" x-intersect="$el.classList.add('fadeInUp')" x-text="reviews[point].headline"></h2>
-              <div class="text-center relative z-20 pt-8">
-                <a class="text-white font-bold inline-flex items-center py-4 px-6 overflow-hidden group relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-14 hover:before:w-full before:h-full before:bg-[#f41e1e] before:transition-all before:duration-300 before:ease-[ease]" href="">
-                  <span class="font-bold relative">START TODAY</span>
-                  <span class="w-3 ml-1 relative">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-current -rotate-45 group-hover:rotate-0 transition-all duration-300 ease-[ease]">
-                      <path d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
-                      </path>
-                    </svg>
-                  </span>
-                </a>
+      <div>
+        <!-- image 1 -->
+        <div x-show="reviews[point].id == 0" class="hero__image"
+          x-transition:enter="transition ease-[ease] duration-500" x-transition:enter-start="opacity-0 -translate-y-8"
+          x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-[ease] duration-500"
+          x-transition:leave-start="opacity-100 translate-0" x-transition:leave-end="opacity-0 translate-y-4">
+          <img class="object-cover transition-all duration-200 ease-[ease]" :src="`/assets/images/${reviews[0].image}`"
+            :alt="reviews[0].title">
+        </div>
+        <!-- image 2 -->
+        <div x-show="reviews[point].id == 1" class="hero__image"
+          x-transition:enter="transition ease-[ease] duration-500" x-transition:enter-start="opacity-0 -translate-y-8"
+          x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-[ease] duration-500"
+          x-transition:leave-start="opacity-100 translate-0" x-transition:leave-end="opacity-0 translate-y-4">
+          <img class="object-cover transition-all duration-200 ease-[ease]" :src="`/assets/images/${reviews[1].image}`"
+            :alt="reviews[1].title">
+        </div>
+        <!-- image 3 -->
+        <div x-show="reviews[point].id == 2" class="hero__image"
+          x-transition:enter="transition ease-[ease] duration-500" x-transition:enter-start="opacity-0 -translate-y-8"
+          x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-[ease] duration-500"
+          x-transition:leave-start="opacity-100 translate-0" x-transition:leave-end="opacity-0 translate-y-4">
+          <img class="object-cover transition-all duration-200 ease-[ease]" :src="`/assets/images/${reviews[1].image}`"
+            :alt="reviews[1].title">
+        </div>
+        <div class="absolute w-full h-full top-0 left-0">
+          <div class="container w-full max-w-screen-xl mx-auto h-full">
+            <div class="w-1/2 h-full flex items-center justify-center">
+              <div class="mb-8">
+                <!-- title 1 -->
+                <h3 x-show="reviews[point].id == 0" class="text-white text-8xl font-bold font-['Hurricane']"
+                  x-transition:enter="transition ease-[ease] duration-300 delay-500"
+                  x-transition:enter-start="opacity-0 translate-y-6" x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease-[ease] duration-100" x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0" x-text="reviews[0].title"></h3>
+
+                <h3 x-show="reviews[point].id == 1" class="text-white text-8xl font-bold font-['Hurricane']"
+                  x-transition:enter="transition ease-[ease] duration-300 delay-500"
+                  x-transition:enter-start="opacity-0 translate-y-6" x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease-[ease] duration-100" x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0" x-text="reviews[1].title"></h3>
+
+                <h3 x-show="reviews[point].id == 2" class="text-white text-8xl font-bold font-['Hurricane']"
+                  x-transition:enter="transition ease-[ease] duration-300 delay-500"
+                  x-transition:enter-start="opacity-0 translate-y-6" x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease-[ease] duration-100" x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0" x-text="reviews[2].title"></h3>
+
+                <h3 class="text-[#f41e1e] text-8xl font-bold font-['Hurricane'] -rotate-[5deg]"
+                  x-intersect="$el.classList.add('fadeInUp')" x-text="reviews[point].subtitle"></h3>
+                <h2 class="text-white text-7xl lg:text-8xl font-[anton] -rotate-[5deg]"
+                  x-intersect="$el.classList.add('fadeInUp')" x-text="reviews[point].headline"></h2>
+                <div class="text-center relative z-20 pt-8">
+                  <a class="text-white font-bold inline-flex items-center py-4 px-6 overflow-hidden group relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-14 hover:before:w-full before:h-full before:bg-[#f41e1e] before:transition-all before:duration-300 before:ease-[ease]"
+                    href="">
+                    <span class="font-bold relative">START TODAY</span>
+                    <span class="w-3 ml-1 relative">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        class="fill-current -rotate-45 group-hover:rotate-0 transition-all duration-300 ease-[ease]">
+                        <path
+                          d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
+                        </path>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
+          <div
+            class="absolute left-0 top-0 bottom-0 w-1/3 bg-cover bg-left bg-no-repeat bg-[url('./../images/floating_image_03_01.png')]">
+          </div>
+          <div
+            class="absolute right-0 top-0 bottom-0 w-1/3 bg-cover bg-right bg-no-repeat bg-[url('./../images/floating_image_03_02.png')]">
+          </div>
+        </div>
       </div>
       <div
         class="absolute left-0 bottom-0 w-full bg-contain bg-bottom bg-no-repeat aspect-[21/4] bg-[url('./../images/white_bottom_wave_01.png')]">
