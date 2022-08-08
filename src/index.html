@@ -93,7 +93,77 @@
 </head>
 
 <body x-data="{sideNav: false, atTop: true}" :class="{ 'overflow-hidden': sideNav }">
-  <header class="header">
+  <!-- navbar top -->
+  <div class="bg-[#222222] py-2 hidden lg:block">
+    <div class="container max-w-screen-xl mx-auto flex items-center justify-between space-x-6 px-6 lg:px-0">
+      <div>
+        <a class="inline-flex items-center space-x-2 text-white hover:text-gray-100 text-sm" href="">
+          <span class="text-[#f41e1e]">
+            <svg class="w-3 h-3 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <path
+                d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z" />
+            </svg>
+          </span>
+          <span>234-244 Stockwell Rd, Brixton</span>
+        </a>
+        <div class="inline-flex items-center space-x-2 text-white hover:text-gray-100 text-sm ml-4">
+          <span class="text-[#f41e1e]">
+            <svg class="w-3 h-3 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M232 120C232 106.7 242.7 96 256 96C269.3 96 280 106.7 280 120V243.2L365.3 300C376.3 307.4 379.3 322.3 371.1 333.3C364.6 344.3 349.7 347.3 338.7 339.1L242.7 275.1C236 271.5 232 264 232 255.1L232 120zM256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0zM48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48C141.1 48 48 141.1 48 256z" />
+            </svg>
+          </span>
+          <span>Mon-Sun: 8:00 - 22:00</span>
+        </div>
+      </div>
+      <div>
+        <ul class="flex items-center justify-center space-x-4 pt-8 lg:pt-0">
+          <li class="navbar__social-item text-[#f41e1e]">
+            <a href="https://www.facebook.com/evernote/">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                </path>
+              </svg>
+              <!-- Facebook -->
+            </a>
+          </li>
+          <li class="navbar__social-item text-[#f41e1e]">
+            <a href="https://twitter.com/evernote">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                </path>
+              </svg>
+              <!-- Twitter -->
+            </a>
+          </li>
+          <li class="navbar__social-item text-[#f41e1e]">
+            <a href="https://www.instagram.com/evernote">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                </path>
+              </svg>
+              <!-- Instagram -->
+            </a>
+          </li>
+          <li class="navbar__social-item text-[#f41e1e]">
+            <a href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
+              <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path
+                  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                </path>
+              </svg>
+              <!-- YouTube -->
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- header menu -->
+  <header class="header relative">
     <div class="w-full left-0 top-0 transition-all duration-500 ease-[ease] delay-300"
       :class="{ 'absolute': atTop, 'fixed bg-white delay-300 animate-[fadeInDown_900ms_ease-in-out] shadow-lg z-50': !atTop }"
       x-on:scroll.window="atTop = (window.pageYOffset > 80) ? false : true;">
@@ -281,7 +351,7 @@
                 </a>
               </div>
               <ul class="menu lg:flex lg:space-x-8 list-none pl-6 lg:pl-0 mr-8">
-                <!-- change menu lists data in src>data>menus.json -->
+
                 <template x-for="(menu, index) in menus" :key="menu.id">
                   <li @click="selectedMenu !== index ? selectedMenu = index : selectedMenu = null"
                     class="menu__item relative group hover:text-[#f41e1e] uppercase transition duration-300 ease-[ease] after:absolute after:content-[''] after:w-full after:origin-left after:scale-x-0 hover:after:scale-x-100 after:left-0 after:bottom-0 lg:after:h-[2px] after:bg-[#f41e1e] after:transition after:duration-300 after:ease-[ease] cursor-pointer"
@@ -329,48 +399,6 @@
                   </li>
                 </template>
               </ul>
-              <ul class="flex items-center justify-center space-x-4 pt-8 lg:pt-0">
-                <li class="text-white hover:text-[#f41e1e]">
-                  <a href="https://www.facebook.com/evernote/">
-                    <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                      <path
-                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                      </path>
-                    </svg>
-                    <!-- Facebook -->
-                  </a>
-                </li>
-                <li class="text-white hover:text-[#f41e1e]">
-                  <a href="https://twitter.com/evernote">
-                    <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path
-                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                      </path>
-                    </svg>
-                    <!-- Twitter -->
-                  </a>
-                </li>
-                <li class="text-white hover:text-[#f41e1e]">
-                  <a href="https://www.instagram.com/evernote">
-                    <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path
-                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                      </path>
-                    </svg>
-                    <!-- Instagram -->
-                  </a>
-                </li>
-                <li class="text-white hover:text-[#f41e1e]">
-                  <a href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
-                    <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                      <path
-                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                      </path>
-                    </svg>
-                    <!-- YouTube -->
-                  </a>
-                </li>
-              </ul>
             </nav>
           </div>
         </div>
@@ -378,6 +406,7 @@
     </div>
   </header>
 
+  <!-- hero section -->
   <section x-data='{
     reviews: [
       { "id": 0, "title": "Skill", "subtitle": "Endurance", "headline": "DISCIPLINE", "url": "start-today", "image": "hero_slider_03_01.jpg" },
@@ -395,7 +424,7 @@
       }, 4000);
     }
 }'>
-    <div class="aspect-square lg:aspect-[16/9] relative overflow-hidden bg-black">
+    <div class="min-h-screen relative overflow-hidden bg-black">
       <div>
         <!-- image 1 -->
         <div x-show="reviews[point].id == 0" class="hero__image"
@@ -795,7 +824,7 @@
       <header class="text-center py-20 mb-4 bg-contain bg-top bg-no-repeat bg-[url('/assets/images/sign_gray.png')]">
         <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']"
           x-intersect="$el.classList.add('fadeInUp')">How you can</h3>
-        <h2 class="text-6xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">#BECOMESTRONGER</h2>
+        <h2 class="text-5xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">#BECOMESTRONGER</h2>
       </header>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-12">
         <div class="flex space-x-4" x-intersect="$el.classList.add('fadeInUp')">
@@ -1135,8 +1164,8 @@
         <div class="flex items-center">
           <div>
             <header class="mb-6">
-              <h3 class="text-5xl text-black font-[anton] mb-6" x-intersect="$el.classList.add('fadeInUp')"><em class="text-transparent not-italic"
-                  style="-webkit-text-stroke: 1px #1d1e21">#1</em> HIT / HIT</h3>
+              <h3 class="text-5xl text-black font-[anton] mb-6" x-intersect="$el.classList.add('fadeInUp')"><em
+                  class="text-transparent not-italic" style="-webkit-text-stroke: 1px #1d1e21">#1</em> HIT / HIT</h3>
             </header>
             <div class="font-[roboto] leading-normal mb-8" x-intersect="$el.classList.add('scale')">
               <p>HIIT workouts shift your body from periods of aerobic activity to periods of the best training tools
@@ -1193,8 +1222,8 @@
         <div class="flex items-center">
           <div>
             <header class="mb-6">
-              <h3 class="text-5xl text-black font-[anton] mb-6" x-intersect="$el.classList.add('fadeInUp')"><em class="text-transparent not-italic"
-                  style="-webkit-text-stroke: 1px #1d1e21">#2</em> STRONGMAN</h3>
+              <h3 class="text-5xl text-black font-[anton] mb-6" x-intersect="$el.classList.add('fadeInUp')"><em
+                  class="text-transparent not-italic" style="-webkit-text-stroke: 1px #1d1e21">#2</em> STRONGMAN</h3>
             </header>
             <div class="font-[roboto] leading-normal mb-8" x-intersect="$el.classList.add('scale')">
               <p>Gymnastic rings are one of the best training tools for developing a strong and muscular upper body. One
@@ -1254,8 +1283,10 @@
     <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
       <header class="lg:flex lg:items-end lg:justify-between mb-16">
         <div class="mb-10 lg:mb-0">
-          <h3 class="text-[#f41e1e] text-7xl lg:text-8xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Devoted</h3>
-          <h2 class="text-white text-6xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">FITNESS COACHES</h2>
+          <h3 class="text-[#f41e1e] text-7xl lg:text-8xl font-bold font-['Hurricane']"
+            x-intersect="$el.classList.add('fadeInUp')">Devoted</h3>
+          <h2 class="text-white text-6xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">FITNESS
+            COACHES</h2>
         </div>
         <div x-intersect="$el.classList.add('fadeInUp')">
           <a class="text-white font-bold inline-flex items-center py-4 pl-4 pr-8 overflow-hidden group relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-14 hover:before:w-full before:h-full before:bg-[#f41e1e] before:transition-all before:duration-300 before:ease-[ease]"
@@ -1513,7 +1544,8 @@
     <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
       <header class="mb-16">
         <div>
-          <h3 class="text-[#f41e1e] text-6xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Our clients’</h3>
+          <h3 class="text-[#f41e1e] text-6xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">
+            Our clients’</h3>
           <h2 class="text-5xl lg:text-6xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">TESTIMONIALS</h2>
         </div>
       </header>
@@ -1561,7 +1593,8 @@
                   </svg>
                 </span>
               </div>
-              <blockquote class="text-3xl lg:text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text" x-intersect="$el.classList.add('fadeInUp')">
+              <blockquote class="text-3xl lg:text-4xl font-[anton] leading-normal mb-6" x-text="reviews[point].text"
+                x-intersect="$el.classList.add('fadeInUp')">
               </blockquote>
               <div class="mb-2" x-intersect="$el.classList.add('scale')">
                 <img src="/assets/images/signature_04.png" alt="">
@@ -1587,166 +1620,163 @@
     </div>
   </section>
 
-  <section class="relative">
-    <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
-      <div class="lg:grid lg:grid-cols-2 lg:items-center">
-        <div class="grid__item">
-          <header class="mb-16">
-            <h3 class="text-[#f41e1e] text-6xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Question?</h3>
-            <h2 class="text-5xl lg:text-6xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">CONTACT US</h2>
-          </header>
-          <div class="input__contact">
-            <div class="input__name">
-              <input type="text" name="your-name" value="" size="40"
-                class="w-full text-black placeholder:text-black border-b border-solid border-gray-300 focus:border-[#f41e1e] focus:outline-none py-3"
-                aria-required="true" aria-invalid="false" placeholder="Name">
-            </div>
-            <div class="input__email">
-              <input type="email" name="your-email" value="" size="40"
-                class="w-full text-black placeholder:text-black border-b border-solid border-gray-300 focus:border-[#f41e1e] focus:outline-none py-3"
-                aria-required="true" aria-invalid="false" placeholder="E-mail*">
-            </div>
-            <div class="input__select">
-              <div class="fancy-select">
-                <select name="interested-menu"
+  <section>
+    <div class="relative">
+      <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
+        <div class="lg:grid lg:grid-cols-2 lg:items-center">
+          <div class="grid__item">
+            <header class="mb-16">
+              <h3 class="text-[#f41e1e] text-6xl font-bold font-['Hurricane']"
+                x-intersect="$el.classList.add('fadeInUp')">Question?</h3>
+              <h2 class="text-5xl lg:text-6xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">CONTACT US</h2>
+            </header>
+            <div class="input__contact">
+              <div class="input__name">
+                <input type="text" name="your-name" value="" size="40"
                   class="w-full text-black placeholder:text-black border-b border-solid border-gray-300 focus:border-[#f41e1e] focus:outline-none py-3"
-                  aria-required="true" aria-invalid="false">
-                  <option value="I Am Interested In">I Am Interested In</option>
-                  <option value="Strongman">Strongman</option>
-                  <option value="Yoga">Yoga</option>
-                  <option value="Cardio Burn">Cardio Burn</option>
-                  <option value="Indoor Cycle">Indoor Cycle</option>
-                  <option value="Crossfit">Crossfit</option>
-                </select>
+                  aria-required="true" aria-invalid="false" placeholder="Name">
               </div>
-            </div>
-            <div class="input__message mb-8">
-              <textarea name="your-message" cols="40" rows="5"
-                class="w-full text-black placeholder:text-black border-b border-solid border-gray-300 focus:border-[#f41e1e] focus:outline-none py-3"
-                aria-invalid="false" placeholder="Your Message"></textarea>
-            </div>
-            <div class="input__button">
-              <button id="submit"
-                class="text-black font-bold inline-flex items-center py-4 pl-4 pr-8 overflow-hidden group relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-14 hover:before:w-full before:h-full before:bg-[#f41e1e] before:transition-all before:duration-300 before:ease-[ease]">
-                <span class="font-bold relative">SEND NOW</span>
-                <span class="w-3 ml-1 relative">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                    class="fill-current -rotate-45 group-hover:rotate-0 transition-all duration-300 ease-[ease]">
-                    <path
-                      d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
-                    </path>
-                  </svg>
-                </span>
-              </button>
+              <div class="input__email">
+                <input type="email" name="your-email" value="" size="40"
+                  class="w-full text-black placeholder:text-black border-b border-solid border-gray-300 focus:border-[#f41e1e] focus:outline-none py-3"
+                  aria-required="true" aria-invalid="false" placeholder="E-mail*">
+              </div>
+              <div class="input__select">
+                <div class="fancy-select">
+                  <select name="interested-menu"
+                    class="w-full text-black placeholder:text-black border-b border-solid border-gray-300 focus:border-[#f41e1e] focus:outline-none py-3"
+                    aria-required="true" aria-invalid="false">
+                    <option value="I Am Interested In">I Am Interested In</option>
+                    <option value="Strongman">Strongman</option>
+                    <option value="Yoga">Yoga</option>
+                    <option value="Cardio Burn">Cardio Burn</option>
+                    <option value="Indoor Cycle">Indoor Cycle</option>
+                    <option value="Crossfit">Crossfit</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input__message mb-8">
+                <textarea name="your-message" cols="40" rows="5"
+                  class="w-full text-black placeholder:text-black border-b border-solid border-gray-300 focus:border-[#f41e1e] focus:outline-none py-3"
+                  aria-invalid="false" placeholder="Your Message"></textarea>
+              </div>
+              <div class="input__button">
+                <button id="submit"
+                  class="text-black font-bold inline-flex items-center py-4 pl-4 pr-8 overflow-hidden group relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-14 hover:before:w-full before:h-full before:bg-[#f41e1e] before:transition-all before:duration-300 before:ease-[ease]">
+                  <span class="font-bold relative">SEND NOW</span>
+                  <span class="w-3 ml-1 relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                      class="fill-current -rotate-45 group-hover:rotate-0 transition-all duration-300 ease-[ease]">
+                      <path
+                        d="M335 408.1C330.3 404.3 328 398.2 328 392s2.344-12.28 7.031-16.97L430.1 280H24C10.75 280 0 269.2 0 255.1C0 242.7 10.75 232 24 232h406.1l-95.03-95.03c-9.375-9.375-9.375-24.56 0-33.94s24.56-9.375 33.94 0l136 136c9.375 9.375 9.375 24.56 0 33.94l-136 136C359.6 418.3 344.4 418.3 335 408.1z">
+                      </path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="grid__item">
-          <div class="grayscale absolute top-0 left-1/2 w-1/2 h-full">
-            <!-- Google Map Copied Code -->
-            <iframe class="w-full h-full"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.4051603706222!3d28.50292593193056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce626851f7009%3A0x621185133cfd1ad1!2sGeeksforGeeks!5e0!3m2!1sen!2sin!4v1585040658255!5m2!1sen!2sin"
-              width="640" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-              tabindex="0">
-            </iframe>
-          </div>
-          <div class="absolute top-[15%] left-1/2 w-1/5 bg-white">
-            <div class="text-black pt-16 pl-12 pr-8 mb-8">
-              <div class="mb-2">
-                <span class="text-sm text-white font-medium bg-[#f41e1e] px-1 pb-[2px]">ADDRESS</span>
-              </div>
-              <h4 class="text-2xl font-[anton] leading-relaxed">244 STOCKWELL RD<br>
-                4TH FLOOR<br>
-                BRIXTON, SW9 9SP</h4>
+          <div class="grid__item">
+            <div class="grayscale aspect-square lg:absolute lg:top-0 lg:left-1/2 lg:w-1/2 lg:h-full">
+              <!-- Google Map Copied Code -->
+              <iframe class="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.4051603706222!3d28.50292593193056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce626851f7009%3A0x621185133cfd1ad1!2sGeeksforGeeks!5e0!3m2!1sen!2sin!4v1585040658255!5m2!1sen!2sin"
+                width="640" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0">
+              </iframe>
             </div>
-            <div class="text-black pl-12 pr-8 mb-8">
-              <div class="mb-2">
-                <span class="text-sm text-white font-medium bg-[#f41e1e] px-1 pb-[2px]">WORKING HOURS</span>
+            <div class="lg:absolute lg:top-[15%] lg:left-1/2 lg:w-1/5 bg-white">
+              <div class="text-black pt-16 pl-12 pr-8 mb-8">
+                <div class="mb-2">
+                  <span class="text-sm text-white font-medium bg-[#f41e1e] px-1 pb-[2px]">ADDRESS</span>
+                </div>
+                <h4 class="text-2xl font-[anton] leading-relaxed">244 STOCKWELL RD<br>
+                  4TH FLOOR<br>
+                  BRIXTON, SW9 9SP</h4>
               </div>
-              <h4 class="text-2xl font-[anton] leading-relaxed">MON - SAT<br>
-                6:00 - 23:00<br>
-                SUNDAY - CLOSED</h4>
-            </div>
-            <div class="text-black pl-12 pr-8 mb-4">
-              <div class="mb-2">
-                <span class="text-sm text-white font-medium bg-[#f41e1e] px-1 pb-[2px]">CONTACT INFO</span>
+              <div class="text-black pl-12 pr-8 mb-8">
+                <div class="mb-2">
+                  <span class="text-sm text-white font-medium bg-[#f41e1e] px-1 pb-[2px]">WORKING HOURS</span>
+                </div>
+                <h4 class="text-2xl font-[anton] leading-relaxed">MON - SAT<br>
+                  6:00 - 23:00<br>
+                  SUNDAY - CLOSED</h4>
               </div>
-              <h4 class="text-2xl font-[anton] leading-relaxed">099 40 70 929<br>
-                info@zelefitness.com</h4>
-            </div>
-            <div class="social__link pl-12 mb-8">
-              <ul class="flex items-center space-x-4">
-                <li>
-                  <a class="text-black hover:text-[#f41e1e]" href="https://www.facebook.com/evernote/">
-                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                      <path
-                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                      </path>
-                    </svg>
-                    <!-- Facebook -->
-                  </a>
-                </li>
-                <li>
-                  <a class="text-black hover:text-[#f41e1e]" href="https://twitter.com/evernote">
-                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path
-                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                      </path>
-                    </svg>
-                    <!-- Twitter -->
-                  </a>
-                </li>
-                <li>
-                  <a class="text-black hover:text-[#f41e1e]" href="https://www.instagram.com/evernote">
-                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                      <path
-                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                      </path>
-                    </svg>
-                    <!-- Instagram -->
-                  </a>
-                </li>
-                <li>
-                  <a class="text-black hover:text-[#f41e1e]"
-                    href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
-                    <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                      <path
-                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                      </path>
-                    </svg>
-                    <!-- YouTube -->
-                  </a>
-                </li>
-              </ul>
+              <div class="text-black pl-12 pr-8 mb-4">
+                <div class="mb-2">
+                  <span class="text-sm text-white font-medium bg-[#f41e1e] px-1 pb-[2px]">CONTACT INFO</span>
+                </div>
+                <h4 class="text-2xl font-[anton] leading-relaxed">099 40 70 929<br>
+                  info@zelefitness.com</h4>
+              </div>
+              <div class="social__link pl-12 mb-8">
+                <ul class="flex items-center space-x-4">
+                  <li>
+                    <a class="text-black hover:text-[#f41e1e]" href="https://www.facebook.com/evernote/">
+                      <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                        </path>
+                      </svg>
+                      <!-- Facebook -->
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-black hover:text-[#f41e1e]" href="https://twitter.com/evernote">
+                      <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                        </path>
+                      </svg>
+                      <!-- Twitter -->
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-black hover:text-[#f41e1e]" href="https://www.instagram.com/evernote">
+                      <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path
+                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                        </path>
+                      </svg>
+                      <!-- Instagram -->
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-black hover:text-[#f41e1e]"
+                      href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
+                      <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path
+                          d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
+                        </path>
+                      </svg>
+                      <!-- YouTube -->
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="translate-y-[2px]">
+      <img class="w-full" src="/assets/images/black_bottom_wave_02.png" alt="">
+    </div>
   </section>
 
   <footer>
-    <div>
-      <img class="w-full" src="/assets/images/blue_bottom_wave_01-1536x176.png" alt="">
-    </div>
-    <div class="bg-[#171c34]">
+    <div class="bg-[#222222]">
       <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
         <div class="lg:grid lg:grid-cols-3">
           <div class="lg:col-span-1 mb-8">
             <div class="mb-8" x-intersect="$el.classList.add('scale')">
-              <img src="/assets/images/logo_footer.png" width="165" height="65" alt="">
-            </div>
-            <div class="text-gray-100">
-              <p class="mb-2">©2021 Zele Outdoors</p>
-              <p><a class="text-gray-400 hover:text-[#f41e1e]" href="">Disclaimer</a><span
-                  class="text-gray-400 mx-2">|</span><a class="text-gray-500 hover:text-[#f41e1e]" href="">Privacy
-                  Policy</a></p>
+              <img src="/assets/images/logo_footer_03.png" width="175" height="180" alt="">
             </div>
           </div>
           <div class="lg:col-span-2 lg:grid lg:grid-cols-4 lg:gap-x-4">
             <div class="mb-8" x-intersect="$el.classList.add('scale')">
               <header class="mb-4">
-                <h4 class="text-[#f41e1e]">QUICKS LINKS</h4>
+                <h4 class="text-gray-100 font-medium">QUICKS LINKS</h4>
               </header>
               <div>
                 <ul class="menu">
@@ -1760,7 +1790,7 @@
             </div>
             <div class="mb-8" x-intersect="$el.classList.add('scale')">
               <header class="mb-4">
-                <h4 class="text-[#f41e1e]">LOCATION & HOURS</h4>
+                <h4 class="text-gray-100 font-medium">LOCATION & HOURS</h4>
               </header>
               <div class="text-gray-400">
                 <p>Mon – Sat: 6:00 – 12:00</p>
@@ -1773,7 +1803,7 @@
             </div>
             <div class="lg:col-span-2 mb-8" x-intersect="$el.classList.add('scale')">
               <header class="mb-8">
-                <h4 class="text-[#f41e1e]">NEWSLETTER</h4>
+                <h4 class="text-gray-100 font-medium">NEWSLETTER</h4>
               </header>
               <div class="lg:flex lg:items-center">
                 <div class="border-b border-solid border-gray-400 pb-2 mb-6">
@@ -1798,7 +1828,7 @@
               <div class="social__link">
                 <ul class="flex items-center space-x-4">
                   <li>
-                    <a class="text-gray-100 hover:text-[#f41e1e]" href="https://www.facebook.com/evernote/">
+                    <a class="text-[#f41e1e] hover:text-gray-100" href="https://www.facebook.com/evernote/">
                       <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                         <path
                           d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
@@ -1808,7 +1838,7 @@
                     </a>
                   </li>
                   <li>
-                    <a class="text-gray-100 hover:text-[#f41e1e]" href="https://twitter.com/evernote">
+                    <a class="text-[#f41e1e] hover:text-gray-100" href="https://twitter.com/evernote">
                       <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <path
                           d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
@@ -1818,7 +1848,7 @@
                     </a>
                   </li>
                   <li>
-                    <a class="text-gray-100 hover:text-[#f41e1e]" href="https://www.instagram.com/evernote">
+                    <a class="text-[#f41e1e] hover:text-gray-100" href="https://www.instagram.com/evernote">
                       <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path
                           d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
@@ -1828,7 +1858,7 @@
                     </a>
                   </li>
                   <li>
-                    <a class="text-gray-100 hover:text-[#f41e1e]"
+                    <a class="text-[#f41e1e] hover:text-gray-100"
                       href="https://www.youtube.com/channel/UCr_JcNR6slxFcTtDZ8t6F0A">
                       <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                         <path
@@ -1839,7 +1869,7 @@
                     </a>
                   </li>
                   <li>
-                    <a class="text-gray-100 hover:text-[#f41e1e]" href="https://www.linkedin.com/company/evernote">
+                    <a class="text-[#f41e1e] hover:text-gray-100" href="https://www.linkedin.com/company/evernote">
                       <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path
                           d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
