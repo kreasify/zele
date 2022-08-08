@@ -363,12 +363,12 @@
       }, 4000);
     }
 }'>
-    <div class="aspect-square lg:aspect-[16/9] relative overflow-hidden">
+    <div class="aspect-square lg:aspect-[16/9] relative overflow-hidden bg-black">
       <div>
         <!-- image 1 -->
         <div x-show="reviews[point].id == 0" class="hero__image"
           x-transition:enter="transition ease-[ease] duration-300" x-transition:enter-start="opacity-0"
-          x-transition:enter-end="opacity-100" x-transition:leave="transition ease-[ease] duration-300"
+          x-transition:enter-end="opacity-100" x-transition:leave="transition ease-[ease] duration-100"
           x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
           <img class="object-cover transition-all duration-200 ease-[ease]" :src="`/assets/images/${reviews[0].image}`"
             :alt="reviews[0].title">
@@ -376,7 +376,7 @@
         <!-- image 2 -->
         <div x-show="reviews[point].id == 1" class="hero__image"
           x-transition:enter="transition ease-[ease] duration-300" x-transition:enter-start="opacity-0"
-          x-transition:enter-end="opacity-100" x-transition:leave="transition ease-[ease] duration-300"
+          x-transition:enter-end="opacity-100" x-transition:leave="transition ease-[ease] duration-100"
           x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
           <img class="object-cover transition-all duration-200 ease-[ease]" :src="`/assets/images/${reviews[1].image}`"
             :alt="reviews[1].title">
@@ -384,7 +384,7 @@
         <!-- image 3 -->
         <div x-show="reviews[point].id == 2" class="hero__image"
           x-transition:enter="transition ease-[ease] duration-300" x-transition:enter-start="opacity-0"
-          x-transition:enter-end="opacity-100" x-transition:leave="transition ease-[ease] duration-300"
+          x-transition:enter-end="opacity-100" x-transition:leave="transition ease-[ease] duration-100"
           x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
           <img class="object-cover transition-all duration-200 ease-[ease]" :src="`/assets/images/${reviews[2].image}`"
             :alt="reviews[2].title">
@@ -586,27 +586,14 @@
     </div>
   </section>
 
-  <section>
-    <div
-      class="aspect-square lg:aspect-[21/9] relative bg-cover bg-center bg-no-repeat bg-[url('/assets/images/hero_team.jpg')] flex items-center justify-center">
-      <div>
-        <h1 class="text-white text-6xl lg:text-8xl font-bold font-['Hurricane'] -rotate-12 underline mb-20 lg:mb-40">Our
-          Team</h1>
-      </div>
-      <div
-        class="absolute left-0 bottom-0 w-full bg-contain bg-bottom bg-no-repeat aspect-[21/3] bg-[url('./../images/white_bottom_wave_01.png')]">
-      </div>
-    </div>
-  </section>
-
   <section class="bg-fixed bg-cover bg-left bg-no-repeat bg-[url('/assets/images/background_03_01.jpg')]">
     <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
       <header class="lg:flex lg:justify-between lg:items-center">
         <div class="mb-10 lg:mb-0">
-          <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']">Build your</h3>
-          <h2 class="text-6xl lg:text-7xl font-[anton]">BEST BODY</h2>
+          <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Build your</h3>
+          <h2 class="text-6xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">BEST BODY</h2>
         </div>
-        <div>
+        <div x-intersect="$el.classList.add('fadeInUp')">
           <a class="text-gray-700 font-bold inline-flex items-center py-4 pl-4 pr-8 overflow-hidden group relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-14 hover:before:w-full before:h-full before:bg-[#f41e1e] before:transition-all before:duration-300 before:ease-[ease]"
             href="">
             <span class="font-bold relative">ALL PROGRAMS</span>
@@ -624,7 +611,7 @@
       <div class="lg:grid lg:grid-cols-3 lg:gap-x-6">
         <div class="grid__item pt-32">
           <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
-            <div class="overflow-hidden">
+            <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
                 src="/assets/images/card_image_07.jpg" alt="">
             </div>
@@ -647,7 +634,7 @@
             </div>
           </div>
           <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
-            <div class="overflow-hidden">
+            <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
                 src="/assets/images/card_image_10.jpg" alt="">
             </div>
@@ -671,8 +658,8 @@
           </div>
         </div>
         <div class="grid__item pt-16">
-          <div class="relative group mb-8">
-            <div class="overflow-hidden">
+          <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
+            <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
                 src="/assets/images/card_image_08.jpg" alt="">
             </div>
@@ -694,8 +681,8 @@
               </div>
             </div>
           </div>
-          <div class="relative group mb-8">
-            <div class="overflow-hidden">
+          <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
+            <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
                 src="/assets/images/card_image_11.jpg" alt="">
             </div>
@@ -719,8 +706,8 @@
           </div>
         </div>
         <div class="grid__item">
-          <div class="relative group mb-8">
-            <div class="overflow-hidden">
+          <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
+            <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
                 src="/assets/images/card_image_09.jpg" alt="">
             </div>
@@ -742,8 +729,8 @@
               </div>
             </div>
           </div>
-          <div class="relative group overflow-hidden mb-8">
-            <div class="overflow-hidden">
+          <div class="relative group mb-8" x-intersect="$el.classList.add('fadeInUp')">
+            <div class="overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-300 ease-in-out">
               <img class="group-hover:scale-105 transition-all duration-500 ease-[ease]"
                 src="/assets/images/card_image_12.jpg" alt="">
             </div>
@@ -771,13 +758,13 @@
   </section>
 
   <section class="bg-fixed bg-cover bg-right bg-no-repeat bg-[url('/assets/images/background_03_02.jpg')]">
-    <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
+    <div class="container w-full max-w-screen-xl mx-auto pt-8 pb-16 lg:pb-24 px-6 lg:px-0">
       <header class="text-center py-20 mb-4 bg-contain bg-top bg-no-repeat bg-[url('/assets/images/sign_gray.png')]">
-        <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']">How you can</h3>
-        <h2 class="text-6xl lg:text-7xl font-[anton]">#BECOMESTRONGER</h2>
+        <h3 class="text-[#f41e1e] text-6xl lg:text-7xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">How you can</h3>
+        <h2 class="text-6xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">#BECOMESTRONGER</h2>
       </header>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-12">
-        <div class="flex space-x-4">
+        <div class="flex space-x-4" x-intersect="$el.classList.add('fadeInUp')">
           <div class="w-16 h-16">
             <svg class="w-16 h-16" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -798,7 +785,7 @@
               strategies.</p>
           </div>
         </div>
-        <div class="flex space-x-4">
+        <div class="flex space-x-4" x-intersect="$el.classList.add('fadeInUp')">
           <div class="w-16 h-16">
             <svg class="w-16 h-16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
               width="127" height="127" viewBox="0 0 127 127" fill="none">
@@ -818,7 +805,7 @@
               achieved with healthy diet and regular exercise.</p>
           </div>
         </div>
-        <div class="flex space-x-4">
+        <div class="flex space-x-4" x-intersect="$el.classList.add('fadeInUp')">
           <div class="w-16 h-16">
             <svg class="w-16 h-16" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -838,7 +825,7 @@
               a Functional training protocol.</p>
           </div>
         </div>
-        <div class="flex space-x-4">
+        <div class="flex space-x-4" x-intersect="$el.classList.add('fadeInUp')">
           <div class="w-16 h-16">
             <svg class="w-16 h-16" viewBox="0 0 128 127" fill="none" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -858,7 +845,7 @@
               define physique sport like for sure.</p>
           </div>
         </div>
-        <div class="flex space-x-4">
+        <div class="flex space-x-4" x-intersect="$el.classList.add('fadeInUp')">
           <div class="w-16 h-16">
             <svg class="w-16 h-16" viewBox="0 0 127 129" fill="none" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -878,7 +865,7 @@
               before. Unveil a new angle of fitness.</p>
           </div>
         </div>
-        <div class="flex space-x-4">
+        <div class="flex space-x-4" x-intersect="$el.classList.add('fadeInUp')">
           <div class="w-16 h-16">
             <svg class="w-16 h-16" viewBox="0 0 127 128" fill="none" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -908,7 +895,7 @@
         <div class="lg:grid lg:grid-cols-3 lg:items-center lg:gap-x-10">
           <div class="relative mb-8 lg:mb-0">
             <div>
-              <img class="max-w-full" src="/assets/images/hero_image_05.png" alt="">
+              <img class="max-w-full" src="/assets/images/hero_image_05.png" alt="" x-intersect="$el.classList.add('scale')">
             </div>
             <div class="absolute left-0 bottom-0 z-10">
               <img class="max-w-full" src="/assets/images/floating_image_05.png" alt="">
@@ -917,11 +904,11 @@
           <div class="lg:col-span-2">
             <div class="lg:grid lg:grid-cols-3 lg:items-center">
               <header class="lg:col-span-2">
-                <h3 class="text-white text-6xl lg:text-7xl font-bold font-['Hurricane']">Your first</h3>
-                <h2 class="text-6xl lg:text-7xl font-[anton]">CLASS FREE</h2>
+                <h3 class="text-white text-6xl lg:text-7xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Your first</h3>
+                <h2 class="text-6xl lg:text-7xl font-[anton]" x-intersect="$el.classList.add('fadeInUp')">CLASS FREE</h2>
               </header>
               <div class="lg:col-span-1">
-                <div class="flex items-center bg-white mb-4">
+                <div class="flex items-center bg-white mb-4" x-intersect="$el.classList.add('fadeInUp')">
                   <div class="flex-none w-12 h-12 text-white bg-black flex items-center justify-center">
                     <svg class="w-4 h-auto fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                       <path
@@ -932,7 +919,7 @@
                     <a href="">+99 10 11 900</a>
                   </div>
                 </div>
-                <div>
+                <div x-intersect="$el.classList.add('fadeInUp')">
                   <a class="text-white hover:text-gray-700 bg-black font-bold flex items-center py-3 px-3 overflow-hidden group relative before:absolute before:content-[''] before:-left-4 before:top-0 before:w-0 hover:before:w-[110%] before:h-full before:skew-x-[-20deg] before:bg-white before:transition-all before:duration-300 before:ease-[ease]"
                     href="">
                     <span class="font-bold relative">VIEW SCHEDULE</span>
@@ -951,10 +938,10 @@
     <div class="container w-full max-w-screen-xl mx-auto py-16 px-6 lg:px-0">
       <header class="lg:flex lg:items-end lg:justify-between mb-16">
         <div class="mb-10 lg:mb-0">
-          <h3 class="text-[#f41e1e] text-7xl lg:text-8xl font-bold font-['Hurricane']">Weekly</h3>
-          <h2 class="text-5xl lg:text-6xl text-white font-[anton]">SCHEDULES</h2>
+          <h3 class="text-[#f41e1e] text-7xl lg:text-8xl font-bold font-['Hurricane']" x-intersect="$el.classList.add('fadeInUp')">Weekly</h3>
+          <h2 class="text-5xl lg:text-6xl text-white font-[anton]" x-intersect="$el.classList.add('fadeInUp')">SCHEDULES</h2>
         </div>
-        <div>
+        <div x-intersect="$el.classList.add('fadeInUp')">
           <a class="text-white font-bold flex items-center py-3 px-4 overflow-hidden group relative before:absolute before:content-[''] before:left-0 before:top-0 before:w-14 hover:before:w-full before:h-full before:bg-[#f41e1e] before:transition-all before:duration-300 before:ease-[ease]"
             href="">
             <span class="font-bold relative">VIEW ALL</span>
@@ -970,7 +957,7 @@
         </div>
       </header>
       <div class="lg:grid lg:grid-cols-3 lg:gap-x-6">
-        <div class="card text-gray-400 border border-solid border-gray-400 mb-6">
+        <div class="card text-gray-400 border border-solid border-gray-400 mb-6" x-intersect="$el.classList.add('fadeInUp')">
           <div class="text-white pt-6 px-4 mb-4">
             <div class="mb-2">
               <span class="text-sm font-medium bg-[#f41e1e] px-1 pb-[2px]">CLASSES</span>
@@ -990,7 +977,7 @@
             </ul>
           </div>
         </div>
-        <div class="card text-gray-400 border border-solid border-gray-400 mb-6">
+        <div class="card text-gray-400 border border-solid border-gray-400 mb-6" x-intersect="$el.classList.add('fadeInUp')">
           <div class="text-white pt-6 px-4 mb-4">
             <div class="mb-2">
               <span class="text-sm font-medium bg-[#f41e1e] px-1 pb-[2px]">CLASSES</span>
@@ -1010,7 +997,7 @@
             </ul>
           </div>
         </div>
-        <div class="card text-gray-400 border border-solid border-gray-400 mb-6">
+        <div class="card text-gray-400 border border-solid border-gray-400 mb-6" x-intersect="$el.classList.add('fadeInUp')">
           <div class="text-white pt-6 px-4 mb-4">
             <div class="mb-2">
               <span class="text-sm font-medium bg-[#f41e1e] px-1 pb-[2px]">CLASSES</span>
@@ -1030,7 +1017,7 @@
             </ul>
           </div>
         </div>
-        <div class="card text-gray-400 border border-solid border-gray-400 mb-6">
+        <div class="card text-gray-400 border border-solid border-gray-400 mb-6" x-intersect="$el.classList.add('fadeInUp')">
           <div class="text-white pt-6 px-4 mb-4">
             <div class="mb-2">
               <span class="text-sm font-medium bg-[#f41e1e] px-1 pb-[2px]">CLASSES</span>
@@ -1050,7 +1037,7 @@
             </ul>
           </div>
         </div>
-        <div class="card text-gray-400 border border-solid border-gray-400 mb-6">
+        <div class="card text-gray-400 border border-solid border-gray-400 mb-6" x-intersect="$el.classList.add('fadeInUp')">
           <div class="text-white pt-6 px-4 mb-4">
             <div class="mb-2">
               <span class="text-sm font-medium bg-[#f41e1e] px-1 pb-[2px]">CLASSES</span>
@@ -1070,7 +1057,7 @@
             </ul>
           </div>
         </div>
-        <div class="card text-gray-400 mb-6">
+        <div class="card text-gray-400 mb-6" x-intersect="$el.classList.add('fadeInUp')">
           <div class="text-black bg-gray-100 pt-6 px-4 pb-4">
             <div class="mb-2">
               <span class="text-sm text-white font-medium bg-[#f41e1e] px-1 pb-[2px]">CLASSES</span>
